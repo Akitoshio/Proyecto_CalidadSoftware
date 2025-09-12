@@ -34,10 +34,6 @@ header {
     transition: all 0.5s ease;
 }
 
-.buscador {
-    margin-left: auto;
-}
-
 .logo {
     margin-right: 50px;
 }
@@ -47,10 +43,21 @@ header {
     border-radius: 50%;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3px;
+}
+
+header .buscador {
+  margin-left: 400px;
+}
 nav ul {
     list-style: none;
     display: flex;
     align-items: center;
+    right: 100px;
     margin: 0;
     padding: 0;
 }
@@ -77,42 +84,109 @@ nav ul li a:hover {
 nav ul li:not(:last-child) a {
     border-right: 2px solid #a5e352;
 }
+/*buscador*/
 
-.buscador input {
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    background-color: #c0f776;
-    color: #2e7d32;
-    width: 280px;
-    height: 40px;
-    font-size: 16px;
-}
-
-.buscador input::placeholder {
-    color: #6a8c6a;
-}
-
-.buscador button {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    margin-left: -45px; 
-    padding: 0;
-    
-    
+/* BUSCADOR */
+.buscador {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     position: absolute;
-    right: 47px; 
-    top: 50%;
+    top: 55%;
+    right: 2%;
     transform: translateY(-50%);
+    padding: 0;
+    z-index: 100;
 }
 
-.buscador .icono-lupa {
-    height: 40px;
-    width: 40px;
-    vertical-align: middle;
+/* INPUT */
+.buscador section input {
+    outline: none;
+    box-sizing: border-box;
+    height: 43px;
+    width: 0;
+    padding: 15px 20px;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+    border-radius: 45px;
+    text-align: center;
+    font-size: 20px;
+    transition: all 0.7s ease;
+    position: relative;
+    z-index: 101;
 }
 
+.buscador section input::placeholder {
+    color: #2e7d32;
+}
+
+.buscador:hover input,
+.buscador:focus-within input {
+    width: 250px;
+    margin-right: 20px;
+}
+
+/* BOTÓN */
+.boton {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #d97d94;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 102;
+}
+
+.boton i {
+    font-size: 25px;
+    color: #fef6e4;
+    transition: all 0.7s ease;
+}
+
+/* LISTA DE RESULTADOS */
+.buscador ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 250px;
+    overflow-y: auto;
+    position: absolute;
+    top: 40px;           /* justo debajo del input */
+    left: 0;
+    width: 250px;        /* coincide con el input expandido */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* ELEMENTOS DE LA LISTA */
+.buscador li {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #2e7d32;
+    transition: background 0.2s;
+}
+
+.buscador li:hover,
+.buscador li.selected { /* clase "selected" para teclado */
+    background-color: #d3f0d3;
+}
+
+/* SCROLL ESTILIZADO */
+.buscador ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+.buscador ul::-webkit-scrollbar-thumb {
+    background: #2e7d32;
+    border-radius: 3px;
+}
 #introduccion {
     background-image: url('../Imagenes/introduccion.jpg');
     background-size: 100% 100%;
