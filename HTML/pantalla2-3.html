@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Calidad de software</title>
+      <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/pantalla2.css">
+    <script src="../JS/script.js" defer></script>
 </head>
 <body>
 
@@ -14,11 +17,30 @@
             <img src="../Imagenes/logo.png" alt="Logo Zeballos">
             <h1>Gestión de Calidad de software</h1>
         </div>
-        <div class="menu-icon">
-            <div></div>
-            <div></div>
-            <div></div>
+        <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa-solid fa-bars" id="bar"></i>
+        <i class="fa-solid fa-xmark" id="time"></i>
+    </label>
+
+    <div class="sidebar">
+        <h2>Sección:</h2>
+        <ul>
+            <li><a href="../HTML/pantalla2-3.html">Herramientas de calidad</a></li>
+            <li><a href="../HTML/pantalla2-2.html">Técnicas de aseguramiento de la calidad</a></li>
+            <li><a href="../HTML/pantalla2.html">Fundamentos</a></li>
+        </ul>
+    </div>
+          <!-- BUSCADOR -->
+    <div class="buscador">
+        <section>
+            <input type="text" id="search" placeholder="Buscador">
+        </section>
+        <div class="boton">
+            <i class="fa fa-search"></i>
         </div>
+        <ul id="results"></ul> <!-- Resultados -->
+    </div>
     </header>
 
     <main>

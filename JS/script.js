@@ -5,7 +5,12 @@ const htmlFiles = [
     { name: "Modelos Tradicionales", url: "../HTML/Seccion3-2.html" },
     { name: "Metodologías Ágiles", url: "../HTML/Seccion3-3.html" },
     { name: "Procesos de Desarrollo de Software", url: "../HTML/Seccion3.html"},
-    { name: "Pantalla de Inicio", url: "../HTML/pantalla1.html"}
+    { name: "Pantalla de Inicio", url: "../HTML/pantalla1.html"},
+    { name: "Scrum", url: "../HTML/Seccion4.html"},
+    { name: "Karban", url: "../HTML/Seccion4-2.html"},
+    { name: "Gestión de Calidad de software", url: "../HTML/pantalla2.html"},
+    { name: "Técnicas de aseguramiento de la calidad", url: "../HTML/pantalla2-2.html"},
+    { name: "Herramientas de calidad", url: "../HTML/pantalla2-3.html"}
 ];
 
 const searchInput = document.getElementById('search');
