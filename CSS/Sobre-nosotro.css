@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: cursive
+}
+
+body {
+    background-color: #2e7d32;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('../Imagenes/fondo1.jpg.jpg');
+}
+
+.inner {
+    padding: 80px 20px;
+}
+
+div#container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(164, 227, 82, 0.17);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#container section {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    max-width: 960px;
+    margin: 30px 0;
+    background-color: rgba(46, 125, 50, 0.356);
+    border-radius: 30px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    box-shadow: 0 2px 5px 0 #a5e352;
+}
+
+div#container section article {
+    width: 45%;
+    background-color: #fd9898;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#container section article h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #aa0011;
+}
+
+div#container section aside {
+    width: 55%;
+}
+
+div#container section aside h2 {
+    font-size: 40px;
+    text-shadow: 0 0 3px #a5e352;
+    color: #fff;
+    font-weight: 700;
+}
+
+div#container section aside p {
+    font-size: 20px;
+    text-shadow: 0 0 3px #a5e352;
+    color: #fff;
+}
+
+
+form {
+    width: 90%;
+    max-width: 350px;
+    margin: 30px auto 0 auto;
+}
+
+form input[type=text],
+form input[type=email],
+form textarea[type=comentario] {
+    width: calc(100% - 55px);
+    border: none;
+    padding: 10px 15px 8px 40px;
+    margin: 8px 0;
+    font-size: 18px;
+    border-radius: 20px;
+    background-position: 4% 50%;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-color: #a5e352;
+    border: 3px solid #fff;
+    color: #2e7d32;
+}
+form input[type=text] {
+    background-image: url('assets/icons/user.svg');
+}
+
+form input[type=email] {
+    background-image: url('assets/icons/email.svg');
+}
+
+form textarea[type=cometario] {
+    background-image: url('assets/icons/comentario.svg');
+}
+
+
+form button[type=submit] {
+    margin-top: 20px;
+    border: none;
+    background-color: #fd9898;
+    color: #aa0011;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 25px;
+    transition: 0.2s all ease;
+    box-shadow: 0 2px 5px 0 #ffacac;
+}
+
+form button[type=submit]:hover {
+    background-color: #f9a8a8;
+    color: #a31927;
+}
+
+@media(max-width: 760px) {
+    div#container section {
+        flex-flow: column;
+    }
+    div#container section article,
+    div#container section aside {
+        width: 100%;
+    }
+}
+
+textarea {
+  width: 85%;          /* ocupa todo el ancho del contenedor */
+  box-sizing: border-box; /* cuenta padding/borde en el ancho total */
+  border-radius: 25px;   /* igual al de los inputs redondeados */
+  padding: 10px;
+  color: #2e7d32;
+  background-color: #a5e352;
+  border: 3px solid #fff;
+  resize: none;     /* <– elimina el icono de la esquina */
+  outline: none;    /* <– quita el halo negro/azul al enfocar (opcional) */
+}
+
+#nosotro {
+    text-align: center;
+}
+
+#nosotro img {
+    height: 20%;
+    width: 20%;
+    border-radius: 100%;
+}
+
+#nosotro h2 {
+    font-size: 60px;
+    text-shadow: 0 0 5px #a5e352;
+    letter-spacing: 6px;
+    color: #fff;
+}
+
+#nosotro p {
+    font-size: 20px;
+    text-shadow: 2px 2px 5px #a5e352;
+    color: #fff;
+}
+
+#equipo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #2e7d32;
+}
+
+#equipo h2 {
+    font-size: 60px;
+    text-shadow: 0 0 5px #a5e352;
+    letter-spacing: 6px;
+    color: #fff;
+}
+
+.car {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #fd9898;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+    margin: 15px 20px;
+}
+
+.car:hover {
+    box-shadow: 0 5 15px rgba(91, 37, 51, 0.747);
+    transform: translateY(-15px);
+}
+
+.car .head {
+    height: 125px;
+    width: 100%;
+    position: relative;
+}
+
+.car .head .circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #ffacac;
+    bottom: 0;
+}
+
+.car .head .imagen {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: #ffcfcf;
+    padding: 5px;
+    border-radius: 50%;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+.car .head .imagen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.car .descripcion {
+    height: 200px;
+    padding: 40px 20px 20px 20px;
+    border-bottom: solid 1px rgba(6, 74, 76, .18);
+    text-align: center;
+}
+
+.car .descripcion h3 {
+    color: #fff;
+}
+
+.car .descripcion h4 {
+    color: #fff;
+}
+
+.car .descripcion p {
+    margin-top: 20px;
+    font-size: 11.5px;
+    color: #fff;
+}
+
+.car .contacto {
+    text-align: center;
+}
+
+.car .contacto ul {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+
+.car .contacto ul .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #aa0011;
+    color: #eee;
+    line-height: 50px;
+    border-radius: 50px;
+    font-size: 22px;
+    text-align: center;
+    pointer-events: none;
+    font-family: cursive;
+    transition: opacity .5s .75s ease-out;
+}
+
+.car .contacto ul:hover .text {
+    opacity: 0;
+    transition: opacity .5s .125s ease-out;
+}
+
+.car .contacto ul li {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background: #aa0011;
+    line-height: 55px;
+    text-align: center;
+    margin: 0 -16px;
+    cursor: pointer;
+    border-radius: 0px;
+    transition: background-color .5s ease-out, border-radius .5s .25s ease-out, margin .5s .25s ease-out;
+}
+
+.car .contacto ul li:hover {
+    background: #b7626a;
+}
+
+.car .contacto ul li i {
+    color: #eee;
+    font-size: 22px;
+    opacity: 0;
+    transition: opacity 1.7s;
+}
+
+.car .contacto ul:hover li i {
+    opacity: 1;
+}
+
+.car .contacto ul li:nth-child(1) {
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.car .contacto ul li:nth-child(3) {
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.car .contacto ul:hover li {
+    border-radius: 50px;
+    margin: 0 3px;
+}
+
+.volver {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    background: #2e7d32;
+    color: #fff;
+    /* Rosado oscuro */
+    text-decoration: none;
+}
+
+.volver:hover {
+    text-decoration: underline;
+    color: #a5e352;
+    /* Color al pasar el mouse */
+}
+.rating {
+  display: flex;          /* coloca las estrellas en fila */
+  flex-direction: row-reverse; /* opcional: de derecha a izquierda para marcar al pasar */
+  justify-content: center;
+  gap: 5px;
+  font-size: 2rem;
+}
+
+.rating input {
+  display: none;          /* oculta los radio buttons */
+}
+
+.rating label {
+  cursor: pointer;
+  color: #ccc;            /* color de estrellas vacías */
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #a5e352;            /* color de estrellas seleccionadas o al pasar el mouse */
+}
+
