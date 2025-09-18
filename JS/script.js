@@ -76,3 +76,28 @@ function highlightItem(items) {
         }
     });
 }
+//--Nuevo codigo para ocultar menu y mostrar nombre de la pagina--//
+document.addEventListener('DOMContentLoaded', () =>{
+    const nav = document.querySelector('header nav');
+    const brand = document.getElementById('brand');
+    let lastScroll= 0;
+
+    window.addEventListener('scroll', ()=>{
+        const current = window.scrollY;
+
+        if (current > lastScroll && current > 50){
+            nav.style.opacity = '0';
+            nav.style.pointerEvents = 'none';
+            brand.style.display = 'block';
+            requestAnimationFrame(() => brand.style.opacity = '1');
+        } else if (current < lastScroll){
+            nav.style.opacity = '1';
+            nav.style.pointerEvents = 'auto';
+            brand.style.opacity = '0';
+            setTimeout(() => {
+                if (brand.style.opacity === '0') brand.style.display = 'none';
+            }, 300);
+        }
+        lastScroll = current;
+    });
+});

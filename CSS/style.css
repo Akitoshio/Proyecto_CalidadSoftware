@@ -42,7 +42,15 @@ header {
     height: 70px;
     border-radius: 50%;
 }
-
+#brand{
+    display: flex;                 /* Oculto al inicio */
+    font-family: 'Pacifico', cursive;
+    font-size: 33px;
+    color: #a5e352;                /* mismo tono de verde del menú */
+    margin-left: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 header {
   display: flex;
   align-items: center;
@@ -52,6 +60,9 @@ header {
 
 header .buscador {
   margin-left: 400px;
+}
+header nav{
+    transition: opacity 0.3s ease;
 }
 nav ul {
     list-style: none;
