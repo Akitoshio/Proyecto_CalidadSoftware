@@ -151,27 +151,57 @@ textarea {
 
 #nosotro {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+#nosotro .texto{
+    flex: 1;
+    position: relative;
+    top: -60px;
 
-#nosotro img {
-    height: 20%;
-    width: 20%;
-    border-radius: 100%;
 }
-
-#nosotro h2 {
-    font-size: 60px;
+#nosotro .texto h1{
+    font-size: 2.5rem;
     text-shadow: 0 0 5px #a5e352;
     letter-spacing: 6px;
     color: #fff;
+    position: relative;
+    top: -30px;
+    left: 70px;
+    margin-bottom: 10px;
+}
+#nosotro .texto h2 {
+    font-size: 2rem;
+    text-shadow: 0 0 5px #a5e352;
+    letter-spacing: 6px;
+    color: #fff;
+    position: relative;
+    top: 10px;
+    left: 60px;
+    margin-bottom: 10px;
 }
 
-#nosotro p {
-    font-size: 20px;
+#nosotro .texto p {
+    line-height: 1.6;
     text-shadow: 2px 2px 5px #a5e352;
     color: #fff;
+    position: relative;
+    top: 10px;
+    left: 70px;
 }
-
+#nosotro .imagen{
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+#nosotro .imagen img{
+        width: 100%;
+        position: relative;
+        left: -80px;
+        border-radius: 50px;
+}
 #equipo {
     text-align: center;
     display: flex;

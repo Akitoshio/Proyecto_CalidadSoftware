@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanban</title>
+     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/Seccion3.css">
     <script src="../JS/script.js" defer></script>
@@ -13,7 +14,7 @@
 <header>
      <div class="logo">
         <a href="../HTML/pantalla1.html"><img src="../Imagenes/Logo-pag.png" alt="Logo Zeballos"></a>
-         <h1 >Procesos de Desarrollo de Software</h1>
+         <h1 >Kanban</h1>
     </div>
     <input type="checkbox" id="check">
     <label for="check">
@@ -44,35 +45,45 @@
 
 <main>
     <section id="introduccion">
-        <h2>Procesos de Desarrollo de Software</h2>
+        <h2>Kanban</h2>
          <div class="concepto-box">
-        <p>Un Sistema de Gestión de Calidad de Software es un marco de procesos y prácticas que asegura que
-        el software cumpla requisitos y estándares establecidos. Busca optimizar el desarrollo, reducir errores
-        y garantizar la satisfacción del cliente. Incluye planificación, control, auditoría y mejora continua,
-        apoyándose en normas como ISO 9001 o CMMI.</p>
+        <p>Kanban gestiona el flujo de trabajo a través de tableros visuales. Se enfoca en limitar el
+trabajo en curso para evitar sobrecarga. Elementos básicos: tarjetas que representan
+tareas, columnas que reflejan estados, límites de WIP. Beneficios: flexibilidad, mejora
+continua y visibilidad inmediata de cuellos de botella. Aplicación: ideal en equipos de
+soporte y mantenimiento continuo.</p>
          </div>
     </section>
 
     <section id="contenidos">
         <h2>Contenidos</h2>
 
-        <h3>Teoría 1: "Ciclo de vida del Desarrollo de Software (SDLC)"</h3>
-        <p><span class="keyword">Descripción:</span> “Gestión de la calidad del software” abarca conceptos clave, métricas y estándares internacionales (ISO
-        9126/25000). Incluye técnicas de aseguramiento mediante distintos tipos, niveles y métodos de prueba. Además, integra
-        herramientas para la gestión de pruebas, el seguimiento de defectos y el análisis, garantizando productos confiables,
-        eficientes y alineados con los requisitos.<a href="../HTML/Seccion3-1.html">Ver más Acerca de “Ciclo de vida del Desarrollo de Software (SDLC)”</a></p>
+        <h3>Principios de Kanban:</h3>
+        <p><span class="keyword">Comienza con lo que haces ahora:</span> No requiere reestructurar el equipo ni los procesos actuales de inmediato.</p>
+        <p><span class="keyword">Acepta el cambio gradual:</span> Los cambios se introducen paso a paso, basados en observación y aprendizaje, evitando rupturas bruscas.</p>
+        <p><span class="keyword">Respeta roles y responsabilidades existentes:</span> Se mantiene la estructura organizativa vigente mientras se perfecciona el sistema, generando confianza en la adopción.</p>
+        <p><span class="keyword">Enfocarse en las necesidades del cliente:</span> Todo el sistema se orienta a proporcionar valor al usuario final de la manera más rápida y confiable</p>
+        <p><span class="keyword">Gestionar el trabajo, no a las personas:</span> El tablero y las políticas gestionan el flujo; el equipo se autogestiona y decide cómo realizar las tareas.</p>
+        <p><span class="keyword">Fomentar liderazgo y colaboración en todos los niveles:</span> Cualquiera puede proponer mejoras; el liderazgo es compartido y surge de la iniciativa del equipo.</p>
+        
+        <h3>Roles</h3>
+        <p><span class="keyword">Service Delivery Manager (o Flow Master):</span> Facilita el flujo, elimina bloqueos y promueve la mejora continua.</p>
+        <p><span class="keyword">Service Request Manager (similar a Product Owner):</span> Se enfoca en entender y priorizar las necesidades del cliente.</p>
+        <p><span class="keyword">Equipo de trabajo:</span> Personas multidisciplinarias que ejecutan y se autogestionan, moviendo las tareas en el tablero.</p>
 
-        <h3>Teoría 2: "Modelos Tradicionales"</h3>
-        <p><span class="keyword">Temas:</span> En Procesos de desarrollo de software se tratarían los modelos y metodologías utilizados para crear aplicaciones,
-        como cascada, espiral, incremental y ágiles (Scrum, Kanban). También incluiría fases típicas (análisis, diseño,
-        implementación, pruebas, mantenimiento), roles del equipo, gestión de proyectos y buenas prácticas para asegurar
-        eficiencia, calidad y satisfacción del cliente. <a href="../HTML/Seccion3-2.html">Ver más Acerca de “Modelos Tradicionales”</a></p>
+        <h3>Ceremonias:</h3>
+        <p><span class="keyword">Daily Kanban:</span> Encuentro breve (5-15 min) para revisar el tablero, bloqueos y prioridades.</p>
+        <p><span class="keyword">Replenishment/Commitment Meeting:</span> Decide qué nuevas tareas entran al sistema.</p>
+        <p><span class="keyword">Delivery Planning Meeting:</span> Planifica entregas o releases próximas.</p>
+        <p><span class="keyword">Service Delivery Review:</span> Evalúa el desempeño del flujo y la satisfacción del cliente.</p>
+        <p><span class="keyword">Risk Review / Retrospectiva:</span> Analiza problemas y acuerda acciones de mejora</p>
 
-        <h3>Teoría 3: "Metodologías Ágiles"</h3>
-        <p><span class="keyword">Temas:</span> En Metodologías Ágiles se podría trabajar sobre principios, roles, ceremonias y artefactos, comparándolos con
-        modelos tradicionales. Se profundizaría en Scrum (roles, sprints, backlog, reuniones diarias, revisiones y retrospectivas) y
-        en Kanban como herramienta de gestión visual de procesos. También se analizaría XP (Extreme Programming) y se
-        usarían ejemplos e ilustraciones prácticas.<a href="../HTML/Seccion3-3.html">Ver más Acerca de “Metodologías ágiles” </a></p>
+        <h3>Artefactos:</h3>
+        <p><span class="keyword">Tablero Kanban:</span> Representación visual del flujo de trabajo con columnas (Por hacer, En progreso, Hecho, etc.).</p>
+        <p><span class="keyword">Tarjetas o tickets:</span> Cada tarea o historia se representa en una tarjeta que se mueve de columna en columna.</p>
+        <p><span class="keyword">Límites WIP (Work In Progress):</span> Número máximo de tareas permitidas en cada columna para evitar sobrecarga y asegurar fluidez.</p>
+        <p><span class="keyword">Políticas explícitas:</span> Reglas visibles que definen cuándo una tarea puede pasar de una columna a otra.</p>
+        <p><span class="keyword">Métricas de flujo:</span> Lead Time: tiempo desde que se solicita hasta que se entrega, Cycle Time: tiempo desde que se empieza a trabajar hasta que se termina, Throughput: cantidad de tareas completadas en un período.</p>
 
     </section>
 </main>
