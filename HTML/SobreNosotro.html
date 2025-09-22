@@ -8,6 +8,7 @@
     <title>Sobre nosotros</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/Sobre-nosotro.css">
+    <script src="../JS/SobreNosotros.js" defer></script>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -133,21 +134,26 @@
                         <input type="email" placeholder="Correo Electronico" />
                          <textarea name="comentario" rows="5" placeholder="Escribe tu comentario aquí..."></textarea>
                           <!-- Puntuación (estrellas) -->
-                            <div class="rating">
+                           <div class="rating">
                                 <input type="radio" id="star5" name="rating" value="5" required />
                                 <label for="star5">★</label>
-
                                 <input type="radio" id="star4" name="rating" value="4" />
                                 <label for="star4">★</label>
-
                                 <input type="radio" id="star3" name="rating" value="3" />
                                 <label for="star3">★</label>
-
                                 <input type="radio" id="star2" name="rating" value="2" />
                                 <label for="star2">★</label>
-
                                 <input type="radio" id="star1" name="rating" value="1" />
                                 <label for="star1">★</label>
+                            </div>
+                             <!-- Descripción dinámica debajo (cambia con la estrella seleccionada/hover) -->
+                            <div class="description">
+                                <span class="desc-text" id="desc5">Excelente</span>
+                                <span class="desc-text" id="desc4">Bueno</span>
+                                <span class="desc-text" id="desc3">Regular</span>
+                                <span class="desc-text" id="desc2">Malo</span>
+                                <span class="desc-text" id="desc1">Terrible</span>
+                                <span class="desc-text active" id="default-desc">Selecciona una puntuación</span> <!-- Por defecto -->
                             </div>
                         <button type="submit">Enviar</button>
                     </form>

@@ -401,13 +401,44 @@ textarea {
 }
 
 .rating label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
   color: #ccc;            /* color de estrellas vacías */
+  transition: color 0.2s ease ;
+  gap: 4px;
+  padding: 5px;
+}
+
+.rating label p{
+    margin: 0;
+    font-size: 0.8em;
+    color: inherits;
+    font-weight: bold
 }
 
 .rating input:checked ~ label,
 .rating label:hover,
 .rating label:hover ~ label {
-  color: #a5e352;            /* color de estrellas seleccionadas o al pasar el mouse */
+  color: #a5e352;           /* color de estrellas seleccionadas o al pasar el mouse */
+}
+
+.rating input:focus + label{
+    outline: 2px solid #a5e352;
+    outline-offset: 2px;
+}
+/* Estilos para descripción dinámica debajo (cambia con JS) */
+
+.desc-text {
+  display: none;           /* oculta todos menos active */
+  opacity: 0;              /* para fade-in */
+  transition: opacity 0.2s ease;
+}
+.desc-text.active {
+  display: inline;         /* muestra el activo */
+  opacity: 1;
+  text-shadow: 0 0 5px #a5e352;
+  color: #fff;          /* verde cuando cambia a una selección/hover */
 }
 
