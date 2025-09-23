@@ -156,60 +156,68 @@ textarea {
   resize: none;     /* <– elimina el icono de la esquina */
   outline: none;    /* <– quita el halo negro/azul al enfocar (opcional) */
 }
-
 #nosotro {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 90vh;          /* altura más chica */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 32px;
+    padding: 20px;             /* menos padding */
+    width: 80%;
+    max-width: 1500px;
+    margin: 60px auto 20px auto; /* bajar recuadro */
 }
-#nosotro .texto{
+
+#nosotro .texto {
     flex: 1;
     position: relative;
-    top: -60px;
-
+    top: 0; /* Ajusta top si gustas */
+    left: 0;
+    padding: 20px;
 }
-#nosotro .texto h1{
+
+#nosotro .texto h1,
+#nosotro .texto h2 {
     font-size: 2.5rem;
-    text-shadow: 0 0 5px #a5e352;
     letter-spacing: 6px;
     color: #fff;
-    position: relative;
-    top: -30px;
-    left: 70px;
+    text-shadow: 0 0 5px #a5e352;
     margin-bottom: 10px;
 }
+
 #nosotro .texto h2 {
     font-size: 2rem;
-    text-shadow: 0 0 5px #a5e352;
-    letter-spacing: 6px;
-    color: #fff;
-    position: relative;
-    top: 10px;
-    left: 60px;
-    margin-bottom: 10px;
 }
 
 #nosotro .texto p {
     line-height: 1.6;
-    text-shadow: 2px 2px 5px #a5e352;
     color: #fff;
-    position: relative;
-    top: 10px;
-    left: 70px;
+    text-shadow: 2px 2px 5px #a5e352;
 }
-#nosotro .imagen{
+
+#nosotro .imagen {
     flex: 1;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
 }
-#nosotro .imagen img{
-        width: 100%;
-        position: relative;
-        left: -80px;
-        border-radius: 50px;
+
+#nosotro .imagen img {
+    width: 100%;
+    max-width: 400px; /* ajusta el tamaño */
+    border-radius: 32px;
+    position: relative;
+    left: 0; /* ajustado para que no se salga */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+
 #equipo {
     text-align: center;
     display: flex;
@@ -438,7 +446,7 @@ textarea {
 .desc-text.active {
   display: inline;         /* muestra el activo */
   opacity: 1;
-  text-shadow: 0 0 5px #a5e352;
-  color: #fff;          /* verde cuando cambia a una selección/hover */
-}
+  text-shadow: 0 0 5px #a5e352; /* verde cuando cambia a una selección/hover */
+  color: #fff;    
+}      
 
