@@ -255,7 +255,7 @@ main {
     min-height: 280px;
 }
 
-#introduccion h2 {
+#introduccion h1 {
     color: #aa0011;
     font-size: 2rem;
     display: inline-block;
@@ -286,14 +286,14 @@ main {
     margin: 0 auto;
 }
 
-#contenidos {
+#Contenidos {
     background-color: #ffacac;
     padding: 30px;
     border-radius: 20px;
     margin: 25px;
 }
 
-#contenidos h2 {
+#Contenidos h2 {
     text-align: center;
     color: #aa0011;
     font-size: 24px;
@@ -305,13 +305,13 @@ main {
     padding-bottom: 8px;
 }
 
-#contenidos h3 {
+#Contenidos h3 {
     color: #aa0011;
     font-size: 18px;
     margin-top: 25px;
 }
 
-#contenidos p {
+#Contenidos p {
     background-color: #ffcfcf;
     padding: 15px;
     border-radius: 15px;
@@ -320,14 +320,99 @@ main {
     color: #333;
 }
 
-#contenidos a {
+#Contenidos a {
     color: #0066cc;
     text-decoration: none;
     font-weight: bold;
 }
 
-#contenidos a:hover {
+#Contenidos a:hover {
     text-decoration: underline;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #FDDCDC;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out; /* Transición más suave y un poco más lenta para efecto premium */
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(170, 0, 17, 0.05), transparent); /* Degradado sutil base */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Elevación + escalado más notorio */
+    box-shadow: 0 20px 40px rgba(170, 0, 17, 0.4); /* Sombra más profunda y roja */
+    background-color: #ffe6e6; /* Cambio de fondo más suave */
+}
+
+.card:hover::before {
+    opacity: 1; /* Activa el overlay en hover para efecto de brillo */
+}
+
+.card-image {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px; /* Altura fija para consistencia; ajusta si necesitas */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
+    transition: transform 0.4s ease-in-out; /* Transición para la imagen */
+    display: block;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1); /* Zoom en la imagen durante hover */
+}
+
+.card h3 {
+    color: #aa0011;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #aa0011;
+    padding-bottom: 5px;
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté sobre el overlay */
+}
+
+.card p {
+    margin: 0 0 10px 0;
+    position: relative;
+    z-index: 2;
+}
+
+#Contenidos a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .keyword {
@@ -342,4 +427,24 @@ li {
 
 a {
     text-decoration: none;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .card-image img {
+        height: 150px; /* Imágenes más pequeñas en móvil */
+    }
+    
+    .card:hover {
+        transform: translateY(-5px) scale(1.02); /* Hover menos pronunciado en touch devices */
+    }
 }
