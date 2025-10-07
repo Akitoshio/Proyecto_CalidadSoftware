@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/Encuesta.css">
+    <script src="../JS/Encuesta.js" defer></script>
+    <script src="../JS/script.js" defer></script>
+    
+</head>
+<body>
+    <header>
+     <div class="logo">
+        <a href="../HTML/pantalla1.html"><img src="../Imagenes/Logo-pag.png" alt="Logo Zeballos"></a>
+         <h1>Funcionalidades Adicionales JavaScript</h1>
+    </div>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa-solid fa-bars" id="bar"></i>
+        <i class="fa-solid fa-xmark" id="time"></i>
+    </label>
+
+    <div class="sidebar">
+        <h2>Sección:</h2>
+        <ul>
+            <li><a href="../HTML/Tabla_Comparatiba.html">Tabla comparativa</a></li>
+            <li><a href="../HTML/Encuesta.html">Encuesta</a></li>
+        </ul>
+    </div>
+
+    <!-- BUSCADOR -->
+    <div class="buscador">
+        <section>
+            <input type="text" id="search" placeholder="Buscador">
+        </section>
+        <div class="boton">
+            <i class="fa fa-search"></i>
+        </div>
+        <ul id="results"></ul> <!-- Resultados -->
+    </div>
+</header>
+<main>
+   <div class="survey-container">
+    <h1>Encuesta para Elegir la Mejor Metodología</h1>
+    <p class="intro">
+      Responde las siguientes preguntas y descubre qué metodología se adapta mejor a tu proyecto.
+    </p>
+
+    <form id="surveyForm">
+      <div class="question">
+        <label>1. ¿Tu proyecto requiere cambios frecuentes?</label>
+        <select name="q1" required>
+          <option value="">Selecciona</option>
+          <option value="Agile">Sí, muchos</option>
+          <option value="Scrum">Algunos</option>
+          <option value="Waterfall">Pocos</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>2. ¿Tu equipo tiene experiencia con metodologías ágiles?</label>
+        <select name="q2" required>
+          <option value="">Selecciona</option>
+          <option value="Agile">Sí, mucha</option>
+          <option value="Scrum">Algo</option>
+          <option value="Waterfall">Ninguna</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>3. ¿El proyecto tiene un plazo muy estricto?</label>
+        <select name="q3" required>
+          <option value="">Selecciona</option>
+          <option value="Waterfall">Sí</option>
+          <option value="Scrum">Parcialmente</option>
+          <option value="Agile">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>4. ¿Qué tan seguido cambian los requisitos?</label>
+        <select name="q4" required>
+          <option value="">Selecciona</option>
+          <option value="Agile">Frecuentemente</option>
+          <option value="Scrum">A veces</option>
+          <option value="Waterfall">Rara vez</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>5. ¿El cliente participa activamente?</label>
+        <select name="q5" required>
+          <option value="">Selecciona</option>
+          <option value="Agile">Sí, constantemente</option>
+          <option value="Scrum">Ocasionalmente</option>
+          <option value="Waterfall">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>6. ¿Qué tan grande es tu proyecto?</label>
+        <select name="q6" required>
+          <option value="">Selecciona</option>
+          <option value="Waterfall">Muy grande</option>
+          <option value="Scrum">Mediano</option>
+          <option value="Agile">Pequeño</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>7. ¿Tu equipo prefiere entregas frecuentes?</label>
+        <select name="q7" required>
+          <option value="">Selecciona</option>
+          <option value="Agile">Sí, cada semana</option>
+          <option value="Scrum">Sí, por sprints</option>
+          <option value="Waterfall">No, al final</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>8. ¿Es importante la documentación detallada?</label>
+        <select name="q8" required>
+          <option value="">Selecciona</option>
+          <option value="Waterfall">Muy importante</option>
+          <option value="Scrum">Moderada</option>
+          <option value="Agile">Poca</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>9. ¿El presupuesto es flexible?</label>
+        <select name="q9" required>
+          <option value="">Selecciona</option>
+          <option value="Agile">Sí, flexible</option>
+          <option value="Scrum">Algo</option>
+          <option value="Waterfall">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>10. ¿Tu equipo es multidisciplinario?</label>
+        <select name="q10" required>
+          <option value="">Selecciona</option>
+          <option value="Agile">Sí, totalmente</option>
+          <option value="Scrum">Parcialmente</option>
+          <option value="Waterfall">No</option>
+        </select>
+      </div>
+
+      <button type="submit">Ver Recomendación</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  </main>
+</body>
+</html>
