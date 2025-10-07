@@ -6,11 +6,16 @@ const htmlFiles = [
     { name: "Metodologías Ágiles", url: "../HTML/Seccion3-3.html" },
     { name: "Procesos de Desarrollo de Software", url: "../HTML/Seccion3.html"},
     { name: "Pantalla de Inicio", url: "../HTML/pantalla1.html"},
-    { name: "Scrum", url: "../HTML/Seccion4.html"},
-    { name: "Karban", url: "../HTML/Seccion4-2.html"},
+    { name: "Scrum", url: "../HTML/Seccion4-1.html"},
+    { name: "Kanban", url: "../HTML/Seccion4-2.html"},
     { name: "Gestión de Calidad de software", url: "../HTML/pantalla2.html"},
     { name: "Técnicas de aseguramiento de la calidad", url: "../HTML/pantalla2-2.html"},
-    { name: "Herramientas de calidad", url: "../HTML/pantalla2-3.html"}
+    { name: "Herramientas de calidad", url: "../HTML/pantalla2-3.html"},
+    { name: "Extreme Programming (XP)", url:"../HTML/Seccion4-3.html"},
+    { name: "Recursos y Aprendizaje", url:"../HTML/Seccion_Aprendizaje.html"},
+    { name: "Funcionalidades Adicionales JavaScript", url:"../HTML/Func_Adic_JS.html"},
+    { name: "Encuesta", url: "../HTML/Encuesta.html"},
+    { name: "Tabla Comparativa", url:"../HTML/Tabla_Comparatiba.html"}
 ];
 
 const searchInput = document.getElementById('search');
