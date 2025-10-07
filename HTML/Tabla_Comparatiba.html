@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/Tabla_Comparativa.css">
+    <script src="../JS/Tabla_Comparativa.js" defer></script>
+    <script src="../JS/script.js" defer></script>
+</head>
+<body>
+    <header>
+     <div class="logo">
+        <a href="../HTML/pantalla1.html"><img src="../Imagenes/Logo-pag.png" alt="Logo Zeballos"></a>
+         <h1>“Funcionalidades Adicionales JavaScript</h1>
+    </div>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa-solid fa-bars" id="bar"></i>
+        <i class="fa-solid fa-xmark" id="time"></i>
+    </label>
+
+    <div class="sidebar">
+        <h2>Sección:</h2>
+        <ul>
+            <li><a href="../HTML/Tabla_Comparatiba.html">Tabla comparativa</a></li>
+            <li><a href="../HTML/Encuesta.html">Encuesta</a></li>
+        </ul>
+    </div>
+
+    <!-- BUSCADOR -->
+    <div class="buscador">
+        <section>
+            <input type="text" id="search" placeholder="Buscador">
+        </section>
+        <div class="boton">
+            <i class="fa fa-search"></i>
+        </div>
+        <ul id="results"></ul> <!-- Resultados -->
+    </div>
+</header>
+
+<main>
+<h1 id="uno">Comparador de Metodologías de Desarrollo</h1>
+
+<div class="selectors">
+  <select id="metodologia1">
+    <option value="">Selecciona la primera metodología</option>
+    <option value="Scrum">Scrum</option>
+    <option value="Kanban">Kanban</option>
+    <option value="XP">Extreme Programming</option>
+    <option value="Cascada">Cascada</option>
+    <option value="Espiral">Modelo Espiral</option>
+    <option value="Incremental">Modelo Incremental</option>
+    <option value="VModel">V-Model</option>
+    <option value="Prototipo">Modelo Prototipo</option>
+    <option value="Iterativo">Modelo Iterativo</option>
+  </select>
+
+  <select id="metodologia2">
+    <option value="">Selecciona la segunda metodología</option>
+    <option value="Scrum">Scrum</option>
+    <option value="Kanban">Kanban</option>
+    <option value="XP">Extreme Programming</option>
+    <option value="Cascada">Cascada</option>
+    <option value="Espiral">Modelo Espiral</option>
+    <option value="Incremental">Modelo Incremental</option>
+    <option value="VModel">V-Model</option>
+    <option value="Prototipo">Modelo Prototipo</option>
+    <option value="Iterativo">Modelo Iterativo</option>
+  </select>
+</div>
+
+<div id="comparativo"></div>
+</main>
+</body>
+</html>
