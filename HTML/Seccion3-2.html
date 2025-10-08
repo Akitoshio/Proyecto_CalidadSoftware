@@ -42,177 +42,290 @@
 </header>
 
 <main>
+    <!-- Introducción -->
     <section id="introduccion">
         <h1>Modelos Tradicionales</h1>
         <div class="concepto-box">
-        <p>Los modelos tradicionales de SDLC ofrecen diferentes enfoques para estructurar
-proyectos como el Modelo en Cascada, Modelo Espiral, Modelo Incremental, V-Model, Modelo Prototipado y Modelo Iterativo.Estos modelos siguen
-siendo relevantes en entornos donde la predictibilidad es prioritaria, como proyectos
-gubernamentales o normativos.</p>
+            <p>Los modelos tradicionales de SDLC ofrecen diferentes enfoques para estructurar proyectos como el Modelo en Cascada, Modelo Espiral, Modelo Incremental, V-Model, Modelo Prototipado y Modelo Iterativo. Son relevantes en entornos donde la predictibilidad es prioritaria, como proyectos gubernamentales o normativos.</p>
         </div>
     </section>
+    <!-- Contenedor de cards -->
+    <div class="cards-container">
 
-    <section id="Contenidos">
-        <h2>Modelo Cascada</h2>
+        <!-- Modelo Cascada -->
+    <div class="card">
+    <div class="card-image">
+        <img src="../Imagenes/ModeloCascada.jpg" alt="Modelo Cascada">
+    </div>
+    <h3>Modelo Cascada</h3>
+    <div class="card-section descripcion">
+        <h4>Descripción</h4>
+        <p>Es uno de los modelos tradicionales de desarrollo de software, que se caracteriza por su enfoque secuencial y lineal. Por ende en este modelo cada fase debe completarse mas antes de pasar a la siguiente fase, por lo cual normalmente no se regresa a fases anteriores (aunque en la práctica a veces se hacen ajustes).</p>
+    </div>
 
-        
-        <p><span class="keyword"></span>Es uno de los modelos tradicionales de desarrollo de software, que se caracteriza por su enfoque secuencial y lineal. Por ende en este modelo cada fase debe completarse mas antes de pasar a la siguiente fase, por lo cual normalmente no se regresa a fases anteriores (aunque en la práctica a veces se hacen ajustes).</p>
+    <div class="card-section etapas">
+        <h4>Etapas</h4>
+        <ul>
+            <li>Definición de Requisitos</li>
+            <li>Análisis del Sistema</li>
+            <li>Diseño</li>
+            <li>Codificación</li>
+            <li>Prueba</li>
+            <li>Despliegue</li>
+            <li>Mantenimiento</li>
+        </ul>
+    </div>
 
-        <h3>Etapas:</h3>
-        <p><span class="keyword">Definicion de Requisitos:</span>Se reúnen y documentan todas las necesidades del cliente.</p>
-        <p><span class="keyword">Analisis del sistema:</span>Se estudian los requisitos para determinar la viabilidad técnica y se modelan procesos y datos.</p>
-        <p><span class="keyword">Diseño:</span>Se crea la arquitectura del sistema: bases de datos, interfaces, diagramas, flujos de datos.</p>
-        <p><span class="keyword">Codificacion:</span>Los programadores escriben el código de acuerdo con el diseño aprobado.</p>
-        <p><span class="keyword">Prueba:</span>Se verifica y valida que el software funcione correctamente y cumpla los requisitos.</p>
-        <p><span class="keyword">Despliegue:</span>Se instala el sistema en el entorno real y se capacita a los usuarios.</p>
-        <p><span class="keyword">Mantenimiento:</span>Se corrigen errores, se realizan mejoras o adaptaciones a nuevos requisitos.</p>
+    <div class="card-section ventajas">
+        <h4>Ventajas</h4>
+        <ul>
+            <li>Claridad de fases</li>
+            <li>Documentación sólida</li>
+            <li>Cumplimiento normativo</li>
+        </ul>
+    </div>
 
-        <h3>Ventajas:</h3>
-        <p><span class="keyword">Descripción:</span> claridad de fases, documentación sólida, cumplimiento normativo.</p>
+    <div class="card-section desventajas">
+        <h4>Desventajas</h4>
+        <ul>
+            <li>Inflexible ante cambios</li>
+            <li>Riesgos detectados tarde</li>
+        </ul>
+    </div>
 
-        <h3>Desventajas:</h3>
-        <p><span class="keyword">Descripción:</span>inflexible ante cambios, riesgos detectados tarde.</p>
+    <div class="card-section casos">
+        <h4>Casos de uso</h4>
+        <ul>
+            <li>Proyectos con requisitos estables</li>
+            <li>Entornos altamente regulados</li>
+        </ul>
+    </div>
+</div>
 
-        <h3>Casos de uso:</h3>
-        <p><span class="keyword">Descripción:</span> proyectos con requisitos estables, altamente regulados.</p>
-    </section>
-    <section id="Contenidos">
-        <h2>Modelo Espiral</h2>
+        <!-- Modelo Espiral -->
+       <div class="card">
+        <div class="card-image">
+        <img src="../Imagenes/ModeloEspiral.jpg" alt="Modelo espiral">
+    </div>
+    <h3>Modelo Espiral</h3>
+    <div class="card-section descripcion">
+        <h4>Descripción</h4>
+        <p>Es un modelo de desarrollo de software iterativo y evolutivo, que combina elementos del modelo en cascada con un enfoque principal que es identificar y minimizar riesgos durante todo el desarrollo del proyecto</p>
+    </div>
 
-        <p><span class="keyword"> </span>Es un modelo de desarrollo de software iterativo y evolutivo, que combina elementos del modelo en cascada con un enfoque principal que es identificar y minimizar riesgos durante todo el desarrollo del proyecto.</p>
+    <div class="card-section etapas">
+        <h4>Etapas</h4>
+        <ul>
+            <li>Determinacion de Objetivos y Planificación</li>
+            <li>Analisis de Riesgos</li>
+            <li>Desarrollo o Implementación</li>
+            <li>Evaluacion del cliente</li>
+        </ul>
+    </div>
 
-        <h3>Etapas:</h3>
-        <p><span class="keyword"> Determinacion de Objetivos y Planificación:</span>Se definen los objetivos del ciclo y se identifican los requisitos iniciales.</p>
-        <p><span class="keyword"> Análisis de riesgos:</span>Se identifican posibles riesgos técnicos, de costos o de tiempo y se planifican estrategias para mitigarlos.</p>
-        <p><span class="keyword"> Desarrollo o implementación:</span>Se construye un prototipo o versión del software que puede ser probado y evaluado.</p>
-        <p><span class="keyword"> Evaluación del cliente:</span>El usuario evalúa el prototipo o versión desarrollada, proporcionando retroalimentación que guiará la siguiente iteración.</p>
+    <div class="card-section ventajas">
+        <h4>Ventajas</h4>
+        <ul>
+            <li>Evalua riesgos explicitamente</li>
+            <li>Permite prototipos</li>
+            <li>Flexible</li>
+        </ul>
+    </div>
 
-         <h3>Ventajas:</h3>
-        <p><span class="keyword"> Descripción:</span>evalúa riesgos explícitamente, permite prototipos, flexible.</p>
+    <div class="card-section desventajas">
+        <h4>Desventajas</h4>
+        <ul>
+            <li>Complejo de gestionar</li>
+            <li>Costoso</li>
+        </ul>
+    </div>
 
-         <h3>Desventajas:</h3>
-        <p><span class="keyword"> Descripción:</span>complejo de gestionar, costoso.</p>
+    <div class="card-section casos">
+        <h4>Casos de uso</h4>
+        <ul>
+            <li>Proyectos innovadores, criticos y de gran escala</li>
+        </ul>
+    </div>
+</div>
+        <!-- Modelo Incremental -->
+  <div class="card">
+        <div class="card-image">
+        <img src="../Imagenes/ModeloIncremental.jpg" alt="Modelo Incremental">
+    </div>
+    <h3>Modelo Incremental</h3>
+    <div class="card-section descripcion">
+        <h4>Descripción</h4>
+        <p>Es un enfoque de desarrollo de software en el que el sistema se construye y entrega en partes o incrementos, por lo cual cada incremento agrega nuevas funcionalidades al software existente hasta completar el producto final. Este modelo combina desarrollo por fases con la entrega temprana de partes funcionales, lo que permite a los usuarios probar y usar parcialmente el sistema mientras se sigue desarrollando.</p>
+    </div>
 
-         <h3>Casos de uso:</h3>
-        <p><span class="keyword"> Descripción:</span>proyectos innovadores, críticos y de gran escala. </p>
+    <div class="card-section etapas">
+        <h4>Etapas</h4>
+        <ul>
+            <li>Planificación de requisitos</li>
+            <li>Análisis y diseño de cada incremento</li>
+            <li>Implementación o codificación del incremento</li>
+            <li>Pruebas del incremento</li>
+            <li>Entrega del incremento</li>
+            <li>Iteración de nuevos incrementos</li>
+        </ul>
+    </div>
 
-    </section>
-    <section id="Contenidos">
-        <h2>Modelo Incremental</h2>
+    <div class="card-section ventajas">
+        <h4>Ventajas</h4>
+        <ul>
+            <li>feedback temprano, entrega progresiva, menos riesgo de fallo total</li>
+        </ul>
+    </div>
 
-       
-        <p><span class="keyword"></span>Es un enfoque de desarrollo de software en el que el sistema se construye y entrega en partes o incrementos, por lo cual cada incremento agrega nuevas funcionalidades al software existente hasta completar el producto final. Este modelo combina desarrollo por fases con la entrega temprana de partes funcionales, lo que permite a los usuarios probar y usar parcialmente el sistema mientras se sigue desarrollando.</p>
+    <div class="card-section desventajas">
+        <h4>Desventajas</h4>
+        <ul>
+            <li>Requiere arquitectura modular, riesgo de deuda técnica.</li>
+        </ul>
+    </div>
 
-        <h3>Etapas:</h3>
-        
-        <p><span class="keyword">Planificación de requisitos:</span>Se identifican los requisitos generales del sistema y se definen prioridades para los incrementos.</p>
+    <div class="card-section casos">
+        <h4>Casos de uso</h4>
+        <ul>
+            <li>Sistemas grandes que se construyen por etapas.</li>
+        </ul>
+    </div>
+</div>
 
-        <p><span class="keyword">Análisis y diseño de cada incremento:</span>Se analiza y diseña la funcionalidad que se incluirá en el incremento actual.</p>
+        <!-- V-Model -->
+   <div class="card">
+        <div class="card-image">
+        <img src="../Imagenes/V-Model.jpg" alt="V-Model">
+    </div>
+    <h3>V-Model</h3>
+    <div class="card-section descripcion">
+        <h4>Descripción</h4>
+        <p>Es un modelo de desarrollo de software basado en la verificación y validación. Por lo cual se divide en dos parte, la parte izquierda representa la definición y diseño, mientras que la parte derecha representa la validación y pruebas.</p>
+    </div>
 
-        <p><span class="keyword">Implementación o codificación del incremento:</span>Se desarrolla la parte funcional del software correspondiente a ese incremento.</p>
+    <div class="card-section etapas">
+        <h4>Etapas</h4>
+        <ul>
+            <li>Requisitos del Sistema</li>
+            <li>Requisitos Funcionales y de Software</li>
+            <li>Diseño arquitectonico</li>
+            <li>Diseño detallado</li>
+            <li>Validacion y Pruebas</li>
+        </ul>
+    </div>
 
-        <p><span class="keyword">Pruebas del incremento:</span>Se realizan pruebas unitarias e integradas para asegurar que el incremento funciona correctamente.</p>
+    <div class="card-section ventajas">
+        <h4>Ventajas</h4>
+        <ul>
+            <li>trazabilidad clara entre requisitos y pruebas</li>
+        </ul>
+    </div>
 
-        <p><span class="keyword">Entrega del incremento:</span>El incremento se entrega al usuario para su evaluación y retroalimentación.</p>
-        
-        <p><span class="keyword">Iteración de nuevos incrementos:</span>Se repiten las etapas anteriores para cada nuevo incremento hasta completar el sistema final.</p>
-        
-        <h3>Ventajas:</h3>
-        <p><span class="keyword">Descripción:</span>feedback temprano, entrega progresiva, menos riesgo de fallo tota</p>
+    <div class="card-section desventajas">
+        <h4>Desventajas</h4>
+        <ul>
+            <li>rigidez, requiere pruebas definidas tempranamente.</li>
+        </ul>
+    </div>
 
-        <h3>Desventajas:</h3>
-        <p><span class="keyword">Descripción:</span>requiere arquitectura modular, riesgo de deuda técnica.</p>
+    <div class="card-section casos">
+        <h4>Casos de uso</h4>
+        <ul>
+            <li>sectores donde V&V; son críticos (farmacéutica, aeroespacial)</li>
+        </ul>
+    </div>
+</div>
 
-        <h3>Casos de uso:</h3>
-        <p><span class="keyword">Descripción:</span>sistemas grandes que se construyen por etapas.</p>
-    </section>
+        <!-- Modelo Prototipado -->
+     <div class="card">
+        <div class="card-image">
+        <img src="../Imagenes/modelo de prototipos.jpg" alt="Modelo Prototipado">
+    </div>
+    <h3>Modelo Prototipado</h3>
+    <div class="card-section descripcion">
+        <h4>Descripción</h4>
+        <p>Es un enfoque del desarrollo de software en el que se construye una versión preliminar o “prototipo” del sistema antes de desarrollar el producto final. Este prototipo sirve para que los usuarios y desarrolladores puedan visualizar, probar y refinar las funcionalidades del software antes de su implementación definitiva, por lo cual su objetivo principal es reducir riesgos y errores, asegurando que el sistema cumpla con las expectativas y necesidades del usuario.</p>
+    </div>
 
-     <section id="Contenidos">
-        <h2>V-Model</h2>
+    <div class="card-section etapas">
+        <h4>Etapas</h4>
+        <ul>
+            <li>Recolección de requisitos</li>
+            <li>Desarrollo del prototipo inicial</li>
+            <li>Evaluación por parte del usuario</li>
+            <li>Refinamiento del prototipo</li>
+            <li>Desarrollo del producto final</li>
+            <li>Mantenimiento</li>
+        </ul>
+    </div>
 
-        <p><span class="keyword"></span>Es un modelo de desarrollo de software basado en la verificación y validación. Por lo cual se divide en dos parte, la parte izquierda representa la definición y diseño, mientras que la parte derecha representa la validación y pruebas.</p>
+    <div class="card-section ventajas">
+        <h4>Ventajas</h4>
+        <ul>
+            <li>Aclara expectativas, mejora experiencia de usuario.</li>
+        </ul>
+    </div>
 
-        <h3>Etapas:</h3>
-        
-        <p><span class="keyword">Requisitos del Sistema:</span> Se identifican y documentan los requisitos del usuario (aqui tambien se asocia la prueba de aceptacion de usuario).</p>
+    <div class="card-section desventajas">
+        <h4>Desventajas</h4>
+        <ul>
+            <li>Puede generar falsas expectativas si prototipo se confunde con producto final.</li>
+        </ul>
+    </div>
 
-        <p><span class="keyword">Requisitos Funcionales y de Software:</span> Se especifica qué debe hacer el sistema y cómo debe comportarse (aqui se asocia la prueba de sistema).</p>
+    <div class="card-section casos">
+        <h4>Casos de uso</h4>
+        <ul>
+            <li>Proyectos con requisitos poco claros o alto foco en UX</li>
+        </ul>
+    </div>
+</div>
 
-        <p><span class="keyword">Diseño arquitectonico:</span> Se define la arquitectura general del software y cómo interactuarán los módulos (aqui se asocia la prueba de integracion).</p>
+        <!-- Modelo Iterativo -->
+      <div class="card">
+        <div class="card-image">
+        <img src="../Imagenes/ModeloIterativo.jpg" alt="Modelo Iterativo">
+    </div>
+    <h3>Modelo Incremental</h3>
+    <div class="card-section descripcion">
+        <h4>Descripción</h4>
+        <p>Este modelo es un enfoque de desarrollo de software en el que el sistema se desarrolla en ciclos o iteraciones, por lo cual cada iteración produce una versión parcial del software que se mejora progresivamente hasta alcanzar el producto final. Este modelo a diferencia del modelo en cascada, nos permite revisar y modificar los requisitos durante el desarrollo, lo que hace que sea más flexible y adaptable a cambios.</p>
+    </div>
 
-        <p><span class="keyword">Diseño detallado:</span> Se diseñan los módulos individuales, sus interfaces y algoritmos (aqui tambien se asocia la pruena unitaria).</p>
-         
-        <p><span class="keyword">Validacion y Pruebas:</span> Aqui se realizan las pruebas ya mensionadas correspondiente en cada etapa que son: Prueba Unitaria (verifica cada modulo funcione correctamente), Prueba de integracion(verifica que cad modulo funcion bien juntos), Prueba del Sistema (verifica que el sistema cumpla con los requisitos funcionales) y Prueba de aceptacion (verifica que el software cumpla con las necesidades del usuario final)</p>
+    <div class="card-section etapas">
+        <h4>Etapas</h4>
+        <ul>
+            <li>Planificación</li>
+            <li>Analisis y Diseño</li>
+            <li>Implementación/codificacion</li>
+            <li>Pruebas</li>
+            <li>Evaluación/Retroalimentación del usuario</li>
+            <li>Repeticion del ciclo</li>
+        </ul>
+    </div>
 
-        <h3>Ventajas:</h3>
-        <p><span class="keyword">Descripción:</span>trazabilidad clara entre requisitos y pruebas</p>
+    <div class="card-section ventajas">
+        <h4>Ventajas</h4>
+        <ul>
+            <li>adaptación y mejora continuaS</li>
+        </ul>
+    </div>
 
-         <h3>Desventajas:</h3>
-        <p><span class="keyword">Descripción:</span>: rigidez, requiere pruebas definidas tempranamente.</p>
+    <div class="card-section desventajas">
+        <h4>Desventajas</h4>
+        <ul>
+            <li>riesgo de iteraciones interminables si no se controla.</li>
+        </ul>
+    </div>
 
-         <h3>Casos de uso:</h3>
-        <p><span class="keyword">Descripción:</span>sectores donde V&V; son críticos (farmacéutica, aeroespacial).</p>
-    </section>
-
-    <section id="Contenidos">
-        <h2>Modelo Prototipado</h2>
-
-     
-        <p><span class="keyword"></span>Es un enfoque del desarrollo de software en el que se construye una versión preliminar o “prototipo” del sistema antes de desarrollar el producto final. Este prototipo sirve para que los usuarios y desarrolladores puedan visualizar, probar y refinar las funcionalidades del software antes de su implementación definitiva, por lo cual su objetivo principal es reducir riesgos y errores, asegurando que el sistema cumpla con las expectativas y necesidades del usuario.</p>
-
-        <h3>Etapas:</h3>
-        
-        <p><span class="keyword">Recolección de requisitos:</span>Se identifican las necesidades del usuario y qué funcionalidades debe tener el sistema.</p>
-
-        <p><span class="keyword">Desarrollo del prototipo inicial:</span>Se construye una primera versión simplificada del software que incluya las funciones principales.</p>
-
-        <p><span class="keyword">Evaluación por parte del usuario:</span>El usuario prueba el prototipo y da retroalimentación sobre qué mejorar o cambiar.</p>
-
-        <p><span class="keyword">Refinamiento del prototipo:</span>Se realizan ajustes y se crean nuevas versiones basadas en los comentarios del usuario.</p>
-        
-        <p><span class="keyword">Desarrollo del producto final:</span>Una vez aprobado el prototipo, se construye el software completo y funcional siguiendo buenas prácticas de codificación.</p>
-        
-        <p><span class="keyword">Mantenimiento</span>Después de la implementación final, se realizan ajustes o mejoras según sea necesario.</p>
-
-        <h3>Ventajas:</h3>
-        <p><span class="keyword">Descripción:</span>aclara expectativas, mejora experiencia de usuario. </p>
-
-        <h3>Desventajas:</h3>
-        <p><span class="keyword">Descripción:</span> puede generar falsas expectativas si prototipo se confunde con producto final.</p>
-
-        <h3>Casos de uso:</h3>
-        <p><span class="keyword">Descripción:</span> proyectos con requisitos poco claros o alto foco en UX</p>
-    </section>
-
-    <section id="Contenidos">
-        <h2>Modelo Iterativo</h2>
-
-     
-        <p><span class="keyword"></span> Este modelo es un enfoque de desarrollo de software en el que el sistema se desarrolla en ciclos o iteraciones, por lo cual cada iteración produce una versión parcial del software que se mejora progresivamente hasta alcanzar el producto final. Este modelo a diferencia del modelo en cascada, nos permite revisar y modificar los requisitos durante el desarrollo, lo que hace que sea más flexible y adaptable a cambios.</p>
-
-        <h3>Etapas:</h3>
-        
-        <p><span class="keyword">Planificación:</span>Se determinan los objetivos de la iteración y qué funcionalidades se implementarán.</p>
-
-        <p><span class="keyword">Analisis y Diseño:</span>Se analiza y diseña la funcionalidad que se desarrollará en la iteración actual.</p>
-
-        <p><span class="keyword">Implementación/codificacion:</span>Se desarrolla el código correspondiente a la iteración.</p>
-
-        <p><span class="keyword">Pruebas:</span>Se realizan pruebas unitarias, de integración y del sistema para asegurar que la funcionalidad implementada funciona correctamente.</p>
-        
-        <p><span class="keyword">Evaluación/Retroalimentación del usuario:</span>El usuario prueba la versión parcial del software y da comentarios que guiarán la siguiente iteración</p> 
-        
-        <p><span class="keyword">Repeticion del ciclo:</span>Se inicia una nueva iteración incorporando mejoras, nuevas funcionalidades o cambios según la retroalimentación.</p>
-        
-        <h3>Ventajas:</h3>
-        <p><span class="keyword">Descripción:</span>adaptación y mejora continua</p>
-
-         <h3>Desventajas:</h3>
-        <p><span class="keyword">Descripción:</span> riesgo de iteraciones interminables si no se controla.</p>
-
-         <h3>Casos de uso:</h3>
-        <p><span class="keyword">Descripción:</span>proyectos que requieren refinamiento progresivo</p>
-    </section>
+    <div class="card-section casos">
+        <h4>Casos de uso</h4>
+            <ul>
+                <li>proyectos que requieren refinamiento progresivo</li>
+            </ul>
+        </div>
+    </div>
+ </div>
 </main>
 </body>
 </html>

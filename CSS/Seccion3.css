@@ -381,8 +381,8 @@ main {
 }
 
 .card-image img {
-    width: 100%;
-    height: 200px; /* Altura fija para consistencia; ajusta si necesitas */
+    width: 100px;
+    height: 100px; /* Altura fija para consistencia; ajusta si necesitas */
     object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
     transition: transform 0.4s ease-in-out; /* Transición para la imagen */
     display: block;
@@ -449,3 +449,90 @@ a {
     }
 }
 
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 70px;
+    margin: 20px;
+}
+
+.card {
+    background-color: #ffe6e6;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(170,0,17,0.3);
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    text-align: center;
+    color: #aa0011;
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.card-section {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #ffcfcf;
+}
+
+.card-section h4 {
+    margin-top: 0;
+    color: #aa0011;
+    font-size: 18px;
+    border-bottom: 2px solid #aa0011;
+    padding-bottom: 5px;
+}
+
+.card-section ul {
+    padding-left: 20px;
+}
+
+.card-section ul li {
+    margin-bottom: 5px;
+}
+/* Imagen ilustrativa de las etapas */
+.img-etapas {
+    text-align: center;
+    margin: 25px auto 35px;
+    background-color: #ffcfcf;
+    border-radius: 20px;
+    padding: 20px;
+    width: 85%;
+    max-width: 850px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.img-etapas img {
+    width: 90%;
+    max-width: 650px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-etapas img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(170, 0, 17, 0.3);
+}
+
+.img-etapas .img-descripcion {
+    color: #aa0011;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 10px;
+}
