@@ -450,3 +450,12 @@ textarea {
   color: #fff;    
 }      
 
+.contenedor-contacto {
+    display: flex;
+    flex-wrap: wrap; /* CLAVE: Permite que los elementos se apilen si no caben o si hay un elemento al 100% de ancho */
+    max-width: 1000px; 
+    width: 100%;
+    background-color: #ffcfcf; 
+    border-radius: 20px;
+    /* ... (resto de los estilos) ... */
+}

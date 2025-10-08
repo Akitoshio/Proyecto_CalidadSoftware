@@ -1,0 +1,267 @@
+/* Archivo: ../CSS/contacto.css */
+
+/* --- RESET BÁSICO Y ESTILOS GLOBALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; 
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #2e7d32; /* Fondo verde oscuro del body */
+     overscroll-behavior-y: none;
+}
+
+
+/* --- CONTENEDOR PRINCIPAL DE LA PÁGINA DE CONTACTO --- */
+.contacto-page-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 20px;
+}
+
+.contenedor-contacto {
+    display: flex;
+    max-width: 1000px; 
+    width: 100%;
+    background-color: #ffcfcf; /* Fondo rosa claro de la base */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+
+    /* CONTORNO BRILLANTE PARA TODO EL FORMULARIO (IMAGEN + CAMPOS) */
+    box-shadow: 0 0 25px rgba(165, 227, 82, 0.9), /* Sombra verde brillante principal */
+                0 0 50px rgba(165, 227, 82, 0.6), /* Sombra más amplia y suave */
+                0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra oscura para profundidad */
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Opcional: efecto de brillo al pasar el ratón */
+.contenedor-contacto:hover {
+    box-shadow: 0 0 35px rgba(165, 227, 82, 1), /* Más brillo al pasar el ratón */
+                0 0 70px rgba(165, 227, 82, 0.8),
+                0 15px 40px rgba(0, 0, 0, 0.3); 
+}
+
+
+/* --- LADO IZQUIERDO: IMAGEN (RELLENO COMPLETO) --- */
+.imagen-lado-izquierdo {
+    flex: 1.5; /* Ocupa el 60% del ancho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcfcf;
+    padding: 0; /* Sin padding para que la imagen rellene */
+}
+
+.imagen-lado-izquierdo img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* CLAVE para que la imagen rellene y se recorte si es necesario */
+    max-height: none; 
+}
+
+/* --- LADO DERECHO: FORMULARIO --- */
+.formulario-lado-derecho {
+    flex: 1; /* Ocupa el 40% del ancho */
+    background-color: #2e7d32; /* Fondo verde oscuro del formulario */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: none; /* Quitamos cualquier sombra individual */
+}
+
+.formulario-lado-derecho h2 {
+    font-family: 'Pacifico', cursive; 
+    color: #ffcfcf; 
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.formulario-lado-derecho p {
+    color: #a5e352; 
+    font-size: 1rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: none; 
+    color: #a5e352;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-contacto input[type="text"],
+.form-contacto input[type="email"],
+.form-contacto textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px; 
+    background-color: #a5e352; /* Fondo verde claro de los campos */
+    color: #333;
+    font-size: 1rem;
+    outline: none; 
+    transition: background-color 0.3s ease;
+}
+
+.form-contacto input::placeholder,
+.form-contacto textarea::placeholder {
+    color: rgba(51, 51, 51, 0.7); 
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+    background-color: #c0f776; 
+}
+
+.form-contacto textarea {
+    resize: vertical; 
+    min-height: 80px; 
+}
+/* --- BOTÓN DE ENVÍO CON EFECTO RESPLANDOR --- */
+.btn-enviar {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    
+    /* CAMBIO CLAVE: Usamos el verde claro (#a5e352) como fondo principal */
+    background-color: #d97d94 ; 
+    color: #ffffff; /* Texto en rojo oscuro/vino para alto contraste */
+    
+    font-size: 1.2rem; /* Lo hacemos un poco más grande */
+    font-weight: bold;
+    text-transform: uppercase; /* Le da un toque más formal y destacado */
+    cursor: pointer;
+    
+    /* Efecto de resplandor con sombra roja/rosa */
+    box-shadow: 0 0 10px rgba(217, 125, 148, 0.8), /* Sombra rosa clara */
+                0 0 20px rgba(170, 0, 17, 0.6);   /* Sombra roja oscura */
+    
+    transform: scale(1); /* Escala base */
+    
+    /* Transición suave para todos los efectos */
+    transition: all 0.3s ease-out; 
+    margin-top: 20px;
+}
+
+/* EFECTO HOVER: Aumentar el brillo y la escala */
+.btn-enviar:hover {
+    background-color:  #d97d94; /* Verde más claro para el hover */
+    
+    /* Aumentamos el resplandor */
+    box-shadow: 0 0 15px rgba(217, 125, 148, 1), 
+                0 0 30px rgba(170, 0, 17, 0.8);
+                
+    transform: scale(1.05); /* Se agranda ligeramente */
+}
+
+/* EFECTO CLICK/ACTIVE: Simulación de Presión más suave y sin sombra 3D */
+.btn-enviar:active {
+    background-color: #aa0011; /* Se vuelve rojo oscuro al hacer clic */
+    color: white; /* El texto se vuelve blanco al hacer clic */
+    box-shadow: 0 0 5px rgba(170, 0, 17, 1); /* Resplandor más contenido */
+    transform: scale(0.98); /* Se hunde ligeramente sin el efecto 3D */
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .contenedor-contacto {
+        flex-direction: column; 
+        max-width: 90%;
+        /* Ajuste de sombra en móvil para que no sea excesiva */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    }
+
+    .imagen-lado-izquierdo {
+        padding: 0; 
+        height: 200px; 
+    }
+
+    .formulario-lado-derecho {
+        padding: 30px;
+        box-shadow: none; 
+    }
+
+    .formulario-lado-derecho h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* --- ENLACE INFERIOR (Estilo Hipervínculo Simple) --- */
+.footer-simple-link {
+    width: 100%; 
+    /* Quitamos el padding vertical para pegarlo al borde inferior del contenedor rosa */
+    padding: 20px 0 20px 0; 
+    margin-top: 0; 
+    
+    /* Centramos el contenido */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    
+    /* Fondo transparente, hereda el color rosa del padre */
+    background-color: transparent; 
+}
+
+.btn-volver-principal {
+    display: inline-flex; /* Permite que el elemento se centre y tome el ancho del contenido */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    
+    background-color: transparent; 
+    
+    /* CLAVE: Color de texto verde oscuro, que contrasta con el fondo rosa */
+    color: #a5e352;
+    
+    /* Estilo de la "rayita" abajo (underline) */
+    text-decoration: underline;
+    text-decoration-color: #2e7d32; 
+    text-underline-offset: 5px; 
+    
+    font-size: 1.1rem; 
+    font-weight: bold;
+    padding: 5px; 
+    border-radius: 0; 
+    
+    box-shadow: none; 
+    transform: none; 
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.btn-volver-principal i {
+    font-size: 1.1rem;
+}
+
+.btn-volver-principal:hover {
+    /* CLAVE: Cambia a verde claro en hover */
+    color: #a5e352; 
+    text-decoration-color: #a5e352; 
+    background-color: transparent;
+    transform: none; 
+}
+
+.btn-volver-principal:active {
+    color:#a5e352;
+    text-decoration-color: #a5e352;
+}
