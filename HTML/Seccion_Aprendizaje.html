@@ -7,40 +7,111 @@
      <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/Recursos_Aprendizaje.css">
-    <script src=""defer></script>
+    <script src="../JS/Aprendizaje_y_Recursos.js"defer></script>
     <script src="../JS/script.js" defer></script>
 </head>
 <body>
-  <header>
-     <div class="logo">
-        <a href="../HTML/pantalla1.html"><img src="../Imagenes/Logo-pag.png" alt="Logo Zeballos"></a>
-         <h1>Recursos y Aprendizaje</h1>
+   <header>
+    <div class="logo">
+      <a href="../HTML/pantalla1.html"><img src="../Imagenes/Logo-pag.png" alt="Logo Zeballos"></a>
+      <h1>Recursos y Aprendizaje</h1>
     </div>
+
     <input type="checkbox" id="check">
     <label for="check">
-        <i class="fa-solid fa-bars" id="bar"></i>
-        <i class="fa-solid fa-xmark" id="time"></i>
+      <i class="fa-solid fa-bars" id="bar"></i>
+      <i class="fa-solid fa-xmark" id="time"></i>
     </label>
 
     <div class="sidebar">
-        <h2>Sección:</h2>
-        <ul>
-            <li><a href="../HTML/Seccion4-3.html">Extreme Programming (XP)</a></li>
-            <li><a href="../HTML/Seccion3-3.html">Metodologías Agiles</a></li>
-            <li><a href="../HTML/Seccion4-2.html">Kanban</a></li>
-        </ul>
+      <h2>Sección:</h2>
+      <ul>
+        <li><a href="#glosario">Glosario</a></li>
+        <li><a href="#faq">Preguntas Frecuentes</a></li>
+        <li><a href="#enlaces">Enlaces de Interés</a></li>
+        <li><a href="#ejercicios">Ejercicios y Casos Prácticos</a></li>
+      </ul>
     </div>
 
-    <!-- BUSCADOR -->
     <div class="buscador">
-        <section>
-            <input type="text" id="search" placeholder="Buscador">
-        </section>
-        <div class="boton">
-            <i class="fa fa-search"></i>
-        </div>
-        <ul id="results"></ul> <!-- Resultados -->
+      <section id="budadors">
+        <input type="text" id="search" placeholder="Buscador">
+      </section>
+      <div class="boton">
+        <i class="fa fa-search"></i>
+      </div>
+      <ul id="results"></ul>
     </div>
-</header>
+  </header>
+
+  <main>
+      <!-- GLOSARIO -->
+  <section id="glosario" class="seccion fade-in">
+    <h2><i class="fa-solid fa-book-open"></i> Glosario</h2>
+    <div class="tarjeta-grid">
+      <div class="card">
+        <h3>Algo</h3>
+        <p>Breve descripcion</p>
+      </div>
+      <div class="card">
+        <h3>Algo</h3>
+        <p>Breve descripcion</p>
+      </div>
+      <div class="card">
+        <h3>Algo</h3>
+        <p>Breve descripcion</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+  <section id="faq" class="seccion fade-in">
+    <h2><i class="fa-solid fa-circle-question"></i> Preguntas Frecuentes</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <h3>Preguntas</h3>
+        <p>Respuesta</p>
+      </div>
+      <div class="faq-item">
+        <h3>Preguntas</h3>
+        <p>Respuesta</p>
+      </div>
+      <div class="faq-item">
+        <h3>Preguntas</h3>
+        <p>Respuesta</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENLACES DE INTERÉS -->
+  <section id="enlaces" class="seccion fade-in">
+    <h2><i class="fa-solid fa-link"></i> Enlaces de Interés</h2>
+    <div class="tarjeta enlaces">
+      <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Nombre del Enlaces</a>
+      <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Nombre del Enlaces</a>
+      <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Nombre del Enlaces</a>
+      <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Nombre del Enlaces</a>
+    </div>
+  </section>
+
+  <!-- EJERCICIOS -->
+  <section id="ejercicios" class="seccion fade-in">
+    <h2><i class="fa-solid fa-puzzle-piece"></i> Ejercicios y Casos Prácticos</h2>
+    <div class="tarjeta-grid">
+      <div class="card">
+        <h3>Ejercicio 1: </h3>
+        <p>Breve descripcion</p>
+      </div>
+      <div class="card">
+        <h3>Ejercicio 2: </h3>
+        <p>Breve descripcion</p>
+      </div>
+      <div class="card">
+        <h3>Ejercicio 3: </h3>
+        <p>Breve descripcion</p>
+      </div>
+    </div>
+  </section>
+  </main>
 </body>
 </html>
