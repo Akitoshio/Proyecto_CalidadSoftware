@@ -353,6 +353,8 @@ a {
     color: #fff;
     /* Rosado oscuro */
     text-decoration: none;
+    position: relative;
+    top: 20px;
 }
 
 .volver:hover {

@@ -52,6 +52,7 @@ header {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 header {
   display: flex;
   align-items: center;
@@ -374,5 +375,84 @@ nav ul li:not(:last-child) a {
     width: 80%;
     max-width: 1500px;
     margin: 60px auto 20px auto; /* bajar recuadro */
+}
+
+/* ===== ANIMACIONES AGREGADAS ===== */
+
+/* Suave entrada del texto en la introducción */
+#introduccion .tex1 h1 {
+  animation: fadeDown 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+#introduccion .tex2 p {
+  animation: fadeUp 1.4s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+/* Cards con efecto de aparición secuencial */
+.cards-container.loaded .card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardIn 0.8s ease-out forwards;
+}
+
+.cards-container.loaded .card:nth-child(1) { animation-delay: 0.2s; }
+.cards-container.loaded .card:nth-child(2) { animation-delay: 0.4s; }
+.cards-container.loaded .card:nth-child(3) { animation-delay: 0.6s; }
+.cards-container.loaded .card:nth-child(4) { animation-delay: 0.8s; }
+.cards-container.loaded .card:nth-child(5) { animation-delay: 1s; }
+
+/* Brillo sutil al pasar el cursor por el título principal */
+#introduccion h1:hover {
+  text-shadow: 0 0 10px #b1374390, 0 0 20px #ffacac;
+  transition: text-shadow 0.4s ease-in-out;
+}
+
+
+/* ====== KEYFRAMES ====== */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 

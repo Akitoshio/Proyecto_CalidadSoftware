@@ -337,3 +337,34 @@ li {
 a {
     text-decoration: none;
 }
+
+/* Imagen ilustrativa de las etapas */
+.img-etapas {
+    text-align: center;
+    margin: 25px auto 35px;
+    background-color: #ffcfcf;
+    border-radius: 20px;
+    padding: 20px;
+    width: 85%;
+    max-width: 850px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.img-etapas img {
+    width: 90%;
+    max-width: 650px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-etapas img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(170, 0, 17, 0.3);
+}
+
+.img-etapas .img-descripcion {
+    color: #aa0011;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 10px;
+}
