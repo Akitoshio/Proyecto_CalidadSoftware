@@ -235,7 +235,7 @@ label #time {
     border-radius: 3px;
 }
 main {
-     font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #fd9898 30%, #ffacac 100%);
   display: flex;
   justify-content: center;
@@ -253,6 +253,8 @@ main {
   padding: 40px 30px;
   width: 800px;
   animation: fadeIn 0.8s ease-in-out;
+  position: relative;
+  left: 30px;
 }
 
 h1 {
@@ -348,4 +350,25 @@ li {
 
 a {
     text-decoration: none;
+}
+
+.volver {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    position: relative;
+    bottom: -20px;
+    border-radius: 20px;
+    background: #fd9898;
+    color: #fff;
+    /* Rosado oscuro */
+    text-decoration: none;
+}
+
+.volver:hover {
+    text-decoration: underline;
+    color: #aa0011;
+    /* Color al pasar el mouse */
 }

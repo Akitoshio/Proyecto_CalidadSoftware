@@ -252,8 +252,8 @@ main {
     border-radius: 20px;
     padding-top: 48px ;
     margin: 25px;
-    min-height: 280px;
-    height: 100vh;
+
+    height: 50vh;
 }
 
 #introduccion h1 {
@@ -268,16 +268,19 @@ main {
     font-weight: bold;
     font-style: italic;
     margin-bottom: 10px;      /* ← separa el cuadro de descripción */
-    position: static;         /* ← elimina el absolute */
+    position: relative;         /* ← elimina el absolute */
+    top: -50px;
 }
 
 .concepto-box {
     background-color: #ffcfcf;
     margin-bottom: 20px;
     border-radius: 25px;
-    padding: 54px 20px;
+    padding: 8px 20px;
     max-width: 800px;
     text-align: center;
+    position: relative;
+    top: -30px;
 }
 .concepto-box p {
     color: #aa0011;
@@ -305,4 +308,94 @@ a {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 8px;
-}
+    position: relative;
+    top: -40px;
+} 
+
+  .btn {
+    position: relative;
+    top: -40px;
+    left: -20px;
+    padding: 15px 35px;
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 600px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    outline: 2px solid transparent;
+  }
+
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70px;
+    width: 0;
+    height: 100%;
+    transform: skewX(35deg);
+    transition: width 0.6s ease;
+    z-index: 0;
+    border-radius: 12px;
+  }
+
+  .btn span {
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn:hover::before {
+    width: 180%;
+  }
+
+  .btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Botón rosado */
+  .btn-1 {
+    background: linear-gradient(135deg, #aa0011, #aa0011);
+  }
+  .btn-1::before {
+    background: linear-gradient(135deg, #ffcfcf, #ffcfcf);
+  }
+  .btn-1:hover {
+    color: #aa0011;
+    background: #fff;
+  }
+
+  /* Botón verde */
+  .btn-2 {
+    background: linear-gradient(135deg, #aa0011, #aa0011);
+  }
+  .btn-2::before {
+    background: linear-gradient(135deg, #ffcfcf, #ffcfcf);
+  }
+  .btn-2:hover {
+    color: #aa0011;
+    background: #fff;
+  }
+
+  /* Brillo diagonal sutil */
+  .btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    transform: skewX(35deg);
+    transition: all 0.6s ease;
+    border-radius: 12px;
+  }
+
+  .btn:hover::after {
+    left: 120%;
+  }

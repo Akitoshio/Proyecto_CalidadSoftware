@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, var(--rosa-claro), var(--rosa-fuerte));
+    background:#fd9898;
     margin: 0;
     padding: 40px 20px;
     color: var(--rojo);
@@ -342,4 +342,21 @@ li {
 
 a {
     text-decoration: none;
+}
+.volver {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    background: #fd9898;
+    color: #fff;
+    /* Rosado oscuro */
+    text-decoration: none;
+}
+
+.volver:hover {
+    text-decoration: underline;
+    color: #aa0011;
+    /* Color al pasar el mouse */
 }
