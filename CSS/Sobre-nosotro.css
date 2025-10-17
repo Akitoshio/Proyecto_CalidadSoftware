@@ -380,22 +380,30 @@ textarea {
 }
 
 .volver {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.2em;
+    display: block;
+    width: fit-content;
+    padding: 18px 40px;
+    margin: 40px auto;
     background: #2e7d32;
-    color: #fff;
-    /* Rosado oscuro */
+    color: #a5e352;
+    font-size: 1.2em;
+    font-weight: bold;
     text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 0 20px #a5e352, 0 0 40px #a5e352, 0 0 60px #a5e352;
+    transition: all 0.3s ease;
+    border: 3px solid #a5e352;
+    text-align: center;
+    text-shadow: 0 0 10px #a5e352;
 }
 
 .volver:hover {
-    text-decoration: underline;
-    color: #a5e352;
-    /* Color al pasar el mouse */
-}
+    background: #a5e352;
+    color: #2e7d32;
+    box-shadow: 0 0 30px #a5e352, 0 0 60px #a5e352, 0 0 90px #a5e352;
+    transform: scale(1.1);
+    text-shadow: none;
+} 
 .rating {
   display: flex;          /* coloca las estrellas en fila */
   flex-direction: row-reverse; /* opcional: de derecha a izquierda para marcar al pasar */
@@ -458,4 +466,129 @@ textarea {
     background-color: #ffcfcf; 
     border-radius: 20px;
     /* ... (resto de los estilos) ... */
+}
+
+/* Agrega o modifica esta sección en tu CSS */
+#nosotro .imagen video {
+    /* Mantiene las propiedades del contenedor si fueran necesarias, pero se aplica a la etiqueta video */
+    width: 100%; /* Asegura que ocupe todo el espacio del contenedor 'a' o '.imagen' */
+    height: auto; 
+    display: block; /* Para evitar problemas de espacio debajo */
+    
+    /* PROPIEDAD CLAVE: bordes redondeados */
+    border-radius: 32px; /* Usa el mismo valor de border-radius que el contenedor #nosotro */
+    
+    /* Opcional: para asegurar que el video se adapte dentro del contenedor redondeado */
+    overflow: hidden; 
+    /* PROPIEDAD PARA MEJORAR LA NITIDEZ PERCIBIDA AL ESCALAR */
+ image-rendering: -webkit-optimize-contrast;
+ image-rendering: crisp-edges;
+ 
+}
+
+/* Opcional: También puedes aplicar un border-radius al enlace <a> si deseas asegurar que las esquinas del enlace también estén redondeadas */
+#nosotro .imagen a {
+    display: block; /* El 'a' debe ser de bloque para que el ancho funcione bien */
+    border-radius: 32px; /* Opcional: Redondea el enlace contenedor */
+    overflow: hidden; /* Opcional: Asegura que el contenido (el video) no se salga del borde redondeado del 'a' */
+}
+
+
+/* Contenedor del botón GitHub - NO afecta nada más */
+.github-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px 60px 20px;
+    margin-top: -110px;
+    background: #2e7d32; /* Mismo fondo verde */
+}
+
+/* Botón de GitHub llamativo */
+.github-btn {
+    max-width: 400px;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #ff6b9d, #fd9898);
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.5);
+    transition: all 0.3s ease;
+    border: 3px solid #fff;
+}
+
+.github-btn:hover {
+    background: linear-gradient(135deg, #fd9898, #ffacac);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 107, 157, 0.7);
+}
+
+.github-btn i {
+    font-size: 1.5em;
+}
+
+/* Responsive para el botón */
+@media(max-width: 760px) {
+    .github-btn {
+        font-size: 1.1em;
+        padding: 15px 30px;
+    }
+}
+
+.car .contacto .follow-ig {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    background: #aa0011;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(170, 0, 17, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.car .contacto .follow-ig::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+.car .contacto .follow-ig:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.car .contacto .follow-ig:hover {
+    background: #c92a3a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(170, 0, 17, 0.5);
+}
+
+.car .contacto .follow-ig i {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.car .contacto .follow-ig:hover i {
+    transform: rotate(15deg) scale(1.2);
 }
