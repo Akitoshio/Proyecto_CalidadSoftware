@@ -129,10 +129,22 @@
                 <div class="inner">
                     <h2>Caja de Comentario y Puntuacion</h2>
                     <p>Te envitamos a que dejes tu comentario sobre nuestra pagina y puntuacion</p>
-                    <form action="" method="post">
-                        <input type="text" placeholder="Nombre y Apellido" />
-                        <input type="email" placeholder="Correo Electronico" />
-                         <textarea name="comentario" rows="5" placeholder="Escribe tu comentario aquí..."></textarea>
+                        <form id="formComentario" method="POST" class="form-contacto">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="correo@gmail.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta aquí..." rows="6" required></textarea>
+                        </div>
+
                           <!-- Puntuación (estrellas) -->
                            <div class="rating">
                                 <input type="radio" id="star5" name="rating" value="5" required />
@@ -155,8 +167,9 @@
                                 <span class="desc-text" id="desc1">Terrible</span>
                                 <span class="desc-text active" id="default-desc">Selecciona una puntuación</span> <!-- Por defecto -->
                             </div>
-                        <button type="submit">Enviar</button>
+                       <button type="submit" class="btn-enviar">Enviar Consulta</button>
                     </form>
+                    <p id="estadoComentario"></p>
                 </div>
             </aside>
         </section>
@@ -165,6 +178,10 @@
     <a href="../HTML/pantalla1.html" class="volver">Volver a la página principal</a>
 </div>
     </section>
+    <!-- FIRE BASE -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
 </body>
+
 
 </html>

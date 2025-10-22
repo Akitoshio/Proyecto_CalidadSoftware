@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/contacto.css"> 
+    <script src="../JS/Contactos.js" defer></script>
     
     </head>
 <body>
@@ -21,7 +22,7 @@
                 <h2>Contáctanos</h2>
                 <p>¡Estamos listos para responder tus dudas!</p>
 
-                <form action="#" method="POST" class="form-contacto">
+                <form id="contactForm" method="POST" class="form-contacto">
                     <div class="form-group">
                         <label for="nombre">Nombre Completo</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
@@ -38,6 +39,7 @@
                     </div>
 
                     <button type="submit" class="btn-enviar">Enviar Consulta</button>
+                    <p id="mensajeEstado"></p>
                 </form>
             </div>
         </section>
@@ -45,5 +47,10 @@
 
     <a href="../HTML/pantalla1.html" class="volver">Volver a la página principal</a>
 </div>
+<!-- FIRE BASE -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+
 </body>
 </html>
