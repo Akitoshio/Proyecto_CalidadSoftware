@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zeballos</title>
-      <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/style.css">
     <script src="../JS/script.js" defer></script>
 </head>
@@ -24,7 +25,6 @@
         </ul>
     </nav>
     <div id="brand">Los Angeles de Charlie (y Charlie)</div>
-     <!-- BUSCADOR -->
     <div class="buscador">
         <section>
             <input type="text" id="search" placeholder="Buscador">
@@ -32,8 +32,7 @@
         <div class="boton">
             <i class="fa fa-search"></i>
         </div>
-        <ul id="results"></ul> <!-- Resultados -->
-    </div>
+        <ul id="results"></ul> </div>
 </header>
 
     <main>
@@ -54,60 +53,150 @@
 <section id="Contenidos">
 
     <h2>Contenidos</h2>
-    <div class="cards-container">
+    <div class="cards-container loaded">
+        
         <div class="card">
-            <div class="card-image">
-                <img src="../Imagenes/Gestion de calidad de software.png" alt="Gestión de Calidad de Software">
+            <div class="card-inner-wrapper">
+                <div class="card-number">01</div>
+                <div class="card-image">
+                    <img src="../Imagenes/Gestion de calidad de software.png" alt="Gestión de Calidad de Software">
+                </div>
+                <div class="card-header-text">
+                    <h3>Teoria 1: "Gestión de calidad de Software"</h3>
+                    <p>Conceptos clave, métricas y estándares internacionales...</p>
+                </div>
             </div>
-        <h3>Teoria 1: "Gestión de calidad de Software"</h3>
-            <p><span class="keyword">Descripción:</span> “Gestión de la calidad del software” abarca conceptos clave, métricas y estándares internacionales (ISO
-                9126/25000). Incluye técnicas de aseguramiento mediante distintos tipos, niveles y métodos de prueba. Además, integra
-                herramientas para la gestión de pruebas, el seguimiento de defectos y el análisis, garantizando productos confiables,
-                eficientes y alineados con los requisitos.<a href="../HTML/pantalla2.html">Ver más Acerca de “Gestión de Calidad de software”</a></p>
+            <div class="card-expanded-content">
+                <p>
+                    <span class="keyword">Descripción:</span> “Gestión de la calidad del software” abarca conceptos clave, métricas y estándares internacionales (ISO
+                    9126/25000). Incluye técnicas de aseguramiento mediante distintos tipos, niveles y métodos de prueba. Además, integra
+                    herramientas para la gestión de pruebas, el seguimiento de defectos y el análisis, garantizando productos confiables,
+                    eficientes y alineados con los requisitos.
+                </p>
+                <a href="../HTML/pantalla2.html">Ver más Acerca de “Gestión de Calidad de software” →</a>
+            </div>
         </div>
+        
         <div class="card">
-            <div class="card-image">
-                <img src="../Imagenes/procesos de desarrollo de software.png" alt="Proceso de desarrollo de Software">
+            <div class="card-inner-wrapper">
+                <div class="card-number">02</div>
+                <div class="card-image">
+                    <img src="../Imagenes/procesos de desarrollo de software.png" alt="Proceso de desarrollo de Software">
+                </div>
+                <div class="card-header-text">
+                    <h3>Teoria 2: "Proceso de desarrollo de software"</h3>
+                    <p>Modelos y metodologías utilizados para crear aplicaciones...</p>
+                </div>
             </div>
-        <h3>Teoria 2: "Proceso de desarrollo de software"</h3>
-            <p><span class="keyword">Temas:</span> En Procesos de desarrollo de software se tratarían los modelos y metodologías utilizados para crear aplicaciones,
-                como cascada, espiral, incremental y ágiles (Scrum, Kanban). También incluiría fases típicas (análisis, diseño,
-                implementación, pruebas, mantenimiento), roles del equipo, gestión de proyectos y buenas prácticas para asegurar
-                eficiencia, calidad y satisfacción del cliente. <a href="../HTML/Seccion3.html">Ver más Acerca de “Procesos de desarrollo de software”</a></p>
+            <div class="card-expanded-content">
+                <p>
+                    <span class="keyword">Temas:</span> En Procesos de desarrollo de software se tratarían los modelos y metodologías utilizados para crear aplicaciones,
+                    como cascada, espiral, incremental y ágiles (Scrum, Kanban). También incluiría fases típicas (análisis, diseño,
+                    implementación, pruebas, mantenimiento), roles del equipo, gestión de proyectos y buenas prácticas para asegurar
+                    eficiencia, calidad y satisfacción del cliente.
+                </p>
+                <a href="../HTML/Seccion3.html">Ver más Acerca de “Procesos de desarrollo de software” →</a>
+            </div>
         </div>
+        
         <div class="card">
-            <div class="card-image">
-                <img src="../Imagenes/Metodologia agil.png" alt="Metodologías Agiles">
+            <div class="card-inner-wrapper">
+                <div class="card-number">03</div>
+                <div class="card-image">
+                    <img src="../Imagenes/Metodologia agil.png" alt="Metodologías Agiles">
+                </div>
+                <div class="card-header-text">
+                    <h3>Teoria 3: "Metodologías Ágiles"</h3>
+                    <p>Principios, roles, ceremonias y artefactos...</p>
+                </div>
             </div>
-        <h3>Teoria 3: "Metodologías Ágiles"</h3>
-            <p><span class="keyword">Temas:</span> En Metodologías Ágiles se podría trabajar sobre principios, roles, ceremonias y artefactos, comparándolos con
-                modelos tradicionales. Se profundizaría en Scrum (roles, sprints, backlog, reuniones diarias, revisiones y retrospectivas) y
-                en Kanban como herramienta de gestión visual de procesos. También se analizaría XP (Extreme Programming) y se
-                usarían ejemplos e ilustraciones prácticas.<a href="../HTML/Seccion3-3.html">Ver más Acerca de “Metodologías ágiles” </a></p>
+            <div class="card-expanded-content">
+                <p>
+                    <span class="keyword">Temas:</span> En Metodologías Ágiles se podría trabajar sobre principios, roles, ceremonias y artefactos, comparándolos con
+                    modelos tradicionales. Se profundizaría en Scrum (roles, sprints, backlog, reuniones diarias, revisiones y retrospectivas) y
+                    en Kanban como herramienta de gestión visual de procesos. También se analizaría XP (Extreme Programming) y se
+                    usarían ejemplos e ilustraciones prácticas.
+                </p>
+                <a href="../HTML/Seccion3-3.html">Ver más Acerca de “Metodologías ágiles” →</a>
+            </div>
         </div>
+        
         <div class="card">
-            <div class="card-image">
-                <img src="../Imagenes/Recursos_y_Aprendizaje.jpg" alt="Recursos y Aprendizaje">
+            <div class="card-inner-wrapper">
+                <div class="card-number">04</div>
+                <div class="card-image">
+                    <img src="../Imagenes/Recursos_y_Aprendizaje.jpg" alt="Recursos y Aprendizaje">
+                </div>
+                <div class="card-header-text">
+                    <h3>Teoria 4: "Recursos y Aprendizaje"</h3>
+                    <p>Glosario, FAQ, Enlaces de Interés y Ejercicios Prácticos...</p>
+                </div>
             </div>
-        <h3>Teoria 4: "Recursos y Aprendizaje"</h3>
-            <p><span class="keyword">Temas:</span> Recursos y Aprendizaje reúne materiales útiles para ampliar los conocimientos del usuario. Contiene un Glosario con definiciones clave, una FAQ con respuestas a preguntas frecuentes, Enlaces de Interés hacia recursos externos y Ejercicios Prácticos que ayudan a reforzar y aplicar lo aprendido de forma efectiva.<a href="../HTML/Seccion_Aprendizaje.html">Ver más Acerca de “Recursos y Aprendizaje" </a></p>
+            <div class="card-expanded-content">
+                <p>
+                    <span class="keyword">Temas:</span> Recursos y Aprendizaje reúne materiales útiles para ampliar los conocimientos del usuario. Contiene un Glosario con definiciones clave, una FAQ con respuestas a preguntas frecuentes, Enlaces de Interés hacia recursos externos y Ejercicios Prácticos que ayudan a reforzar y aplicar lo aprendido de forma efectiva.
+                </p>
+                <a href="../HTML/Seccion_Aprendizaje.html">Ver más Acerca de “Recursos y Aprendizaje" →</a>
+            </div>
         </div>
-         <div class="card">
-            <div class="card-image">
-                <img src="../Imagenes/Funcionalidades_Adic_JS.jpg" alt="Funcionalidad Adicionales JavaScript">
+        
+        <div class="card">
+            <div class="card-inner-wrapper">
+                <div class="card-number">05</div>
+                <div class="card-image">
+                    <img src="../Imagenes/Funcionalidades_Adic_JS.jpg" alt="Funcionalidad Adicionales JavaScript">
+                </div>
+                <div class="card-header-text">
+                    <h3>Teoria 5: "Funcionalidad Adicionales con JavaScript"</h3>
+                    <p>Comparador de Metodologías y Encuesta de Preferencias...</p>
+                </div>
             </div>
-            <h3>Teoria 5: "Funcionalidad Adicionales con JavaScript"</h3>
-            <p><span class="keyword">Temas:</span>Funcionalidad Adicional en JavaScript incorpora herramientas interactivas que mejoran la experiencia del usuario. Incluye un Comparador de Metodologías, que permite analizar y comparar distintas metodologías de desarrollo de software, y una Encuesta de Preferencias, que sugiere la metodología más adecuada según las características del proyecto y del equipo<a href="../HTML/Func_Adic_JS.html">Ver más Acerca de “Funcionalidades Adicionales con JavaScript" </a></p>
+            <div class="card-expanded-content">
+                <p>
+                    <span class="keyword">Temas:</span>Funcionalidad Adicional en JavaScript incorpora herramientas interactivas que mejoran la experiencia del usuario. Incluye un Comparador de Metodologías, que permite analizar y comparar distintas metodologías de desarrollo de software, y una Encuesta de Preferencias, que sugiere la metodología más adecuada según las características del proyecto y del equipo
+                </p>
+                <a href="../HTML/Func_Adic_JS.html">Ver más Acerca de “Funcionalidades Adicionales con JavaScript" →</a>
+            </div>
         </div>
     </div>
 </section>
 
- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-      const container = document.querySelector('.cards-container');
-      container.classList.add('loaded');
-  });
-  </script>
 
+<script>
+// El script de navegación con teclado del buscador se mantiene
+//... (Código JS completo aquí si lo incluyes en tu archivo JS/script.js) ...
+
+// Script para la animación de entrada de las cards
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.cards-container');
+    container.classList.add('loaded');
+});
+
+//--Nuevo codigo para ocultar menu y mostrar nombre de la pagina--//
+document.addEventListener('DOMContentLoaded', ()=>{
+    const nav = document.querySelector('header nav');
+    const brand = document.getElementById('brand');
+    let lastScroll= 0;
+
+window.addEventListener('scroll', ()=>{
+    const current = window.scrollY;
+
+        if (current > lastScroll && current > 50){
+        nav.style.opacity = '0';
+            nav.style.pointerEvents = 'none';
+            brand.style.display = 'flex'; 
+            requestAnimationFrame(() => brand.style.opacity = '1');
+            } else if (current < lastScroll){
+        nav.style.opacity = '1';
+            nav.style.pointerEvents = 'auto';
+            brand.style.opacity = '0';
+            setTimeout(() => {
+            if (brand.style.opacity === '0') brand.style.display = 'none';
+                }, 300);
+            }
+        lastScroll = current;
+         });
+});
+    </script>
 </body>
 </html>
