@@ -1,0 +1,197 @@
+    :root {
+      --rosa-claro: #ffcfcf;
+      --rosa-medio: #ffacac;
+      --rosa-fuerte: #fd9898;
+      --rojo: #aa0011;
+      --verde: #2e7d32;
+      --verde-claro: #a5e352;
+    }
+
+    body {
+    font-family: 'Arial', sans-serif;
+      background-color: var(--rosa-fuerte);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--rosa-fuerte);
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      font-family: "Pacifico", cursive;
+    }
+
+    main {
+      background-color: var(--rosa-claro);
+      padding: 90px 270px;
+      border-radius: 40px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      gap: 3px;
+      max-width: 950px;
+      margin: auto;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px #aa0011;
+    }
+    #login-section h2 {
+    margin-bottom: 20px;
+    color: #aa0011;
+    font-family: Arial, sans-serif;
+    }
+    #login-section input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    }
+    #login-section input:focus {
+    border-color: #aa0011;
+    outline: none;
+    box-shadow: #aa0011;
+    }
+    #btn-login {
+    width: 100%;
+    padding: 10px;
+    background-color: #fd9898;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    }
+    #btn-login:hover {
+    background-color: #aa0011;
+    }
+
+    h2 {
+      color: var(--rojo);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .tabla {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .tabla th, .tabla td {
+      border: 1px solid var(--rosa-medio);
+      padding: 10px;
+      text-align: left;
+    }
+
+    .tabla th {
+      background-color: var(--rosa-medio);
+      color: white;
+    }
+
+    .tabla tr:nth-child(even) {
+      background-color: var(--rosa-claro);
+    }
+
+    .vacio {
+      text-align: center;
+      color: var(--rojo);
+      font-weight: bold;
+    }
+
+    button {
+      background-color: var(--verde);
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: var(--verde-claro);
+      color: #aa0011;
+    }
+
+    div{
+        background-color: var(--rosa-fuerte);
+        width: 100%;
+        height: 370%;
+    }
+    
+
+    .footer-simple-link {
+        width: 100%; 
+        /* Quitamos el padding vertical para pegarlo al borde inferior del contenedor rosa */
+        padding: 20px 0 20px 0; 
+        margin-top: 0; 
+        
+        /* Centramos el contenido */
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        
+        /* Fondo transparente, hereda el color rosa del padre */
+        background-color: transparent; 
+    }
+
+    .volver {
+        display: block;
+        position: relative;
+        top: 50px;
+        width: fit-content;
+        padding: 25px 40px;
+        margin: 5px auto 40px auto;
+        background: var(--rosa-claro);
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 50px;
+        box-shadow: 0 0 20px #fd9898, 0 0 40px #ffacac, 0 0 60px #ffacac;
+        transition: all 0.3s ease;
+        border: 3px solid #ffacac;
+        text-align: center;
+        text-shadow: 0 0 10px #fd9898;
+    }
+
+    .volver:hover {
+        background: #fff;
+        color: var(--rosa-claro);
+        box-shadow: 0 0 10px #aa0011, 0 0 60px #ffacac, 0 0 90px #ffacac;
+        transform: scale(1.1);
+        text-shadow: none;
+    } 
+    /* --- Adaptación móvil --- */
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  header {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  section {
+    padding: 1rem;
+  }
+  .tabla th, .tabla td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  #btn-login {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}

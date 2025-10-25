@@ -325,10 +325,14 @@ textarea {
 }
 
 .volver {
-    display: block;
+     display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 15px;
     width: fit-content;
     padding: 18px 40px;
-    margin: 40px auto;
+    margin: 40px 10px  40px auto;
     background: #2e7d32;
     color: #a5e352;
     font-size: 1.2em;
@@ -648,4 +652,41 @@ textarea {
     color: white; /* El texto se vuelve blanco al hacer clic */
     box-shadow: 0 0 5px rgba(170, 0, 17, 1); /* Resplandor más contenido */
     transform: scale(0.98); /* Se hunde ligeramente sin el efecto 3D */
+}
+
+/* --- ANIMACIÓN AGREGADA (copiada del primer CSS) --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* --- Adaptación móvil --- */
+@media (max-width: 768px) {
+  div#container section {
+    flex-direction: column;
+    width: 95%;
+  }
+  div#container section article,
+  div#container section aside {
+    width: 100%;
+  }
+  #nosotro {
+    flex-direction: column;
+    width: 90%;
+  }
+  #nosotro .imagen img {
+    max-width: 250px;
+  }
+  #equipo {
+    flex-direction: column;
+  }
+  .car {
+    width: 80%;
+    margin: 20px auto;
+  }
 }

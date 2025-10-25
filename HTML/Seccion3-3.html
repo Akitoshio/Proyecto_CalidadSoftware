@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metodologías Agiles</title>
-      <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/Seccion3.css">
     <script src="../JS/script.js" defer></script>
 </head>
 <body>
     
 <header>
-     <div class="logo">
+     <div class="logo ">
         <a href="../HTML/pantalla1.html"><img src="../Imagenes/Logo-pag.png" alt="Logo Zeballos"></a>
          <h1>Procesos de Desarrollo de Software</h1>
     </div>
@@ -44,41 +44,60 @@
 </header>
 
 <main>
-    <section id="introduccion">
-        <h1>Metodologías Agiles</h1>
-        <div class="concepto-box">
-        <p>Las metodologías ágiles representan un cambio de paradigma frente a los modelos
-tradicionales. Priorizan la colaboración, la adaptabilidad y la entrega constante de valor. Scrum, Kanban y Extreme Programming (XP) son metodologías que se adaptan
-mejor en proyectos dinámicos y permiten entregar software de valor de forma continua</p>
+    <section id="introduccion" class="fade-in">
+        <h1 class="fade-in">Metodologías Ágiles</h1>
+        <div class="concepto-box fade-in">
+            <p>
+                Las metodologías ágiles representan un cambio de paradigma frente a los modelos tradicionales. 
+                Priorizan la colaboración, la adaptabilidad y la entrega constante de valor. Scrum, Kanban y 
+                Extreme Programming (XP) son metodologías que se adaptan mejor en proyectos dinámicos y permiten 
+                entregar software de valor de forma continua.
+            </p>
         </div>
     </section>
 
-    <section id="Contenidos">
+    <section id="Contenidos" class="fade-in">
+        <h2 class="fade-in">Contenidos</h2>
+        <div class="cards-container">
+            <div class="card fade-in">
+                <div class="card-image">
+                    <img src="../Imagenes/ScrumMasters.png" alt="Scrum">
+                </div>
+                <h3>Scrum:</h3>
+                <p>
+                    <span class="keyword">Descripción:</span> organiza el trabajo en sprints de duración fija, 
+                    con roles definidos y ceremonias específicas. Permite gestionar proyectos con alta incertidumbre. 
+                    <a href="../HTML/Seccion4-1.html">Ver más Acerca de “Scrum”</a>
+                </p>
+            </div>
 
-        <h2>Contenidos</h2>
-            <div class="cards-container">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="../Imagenes/ScrumMasters.png" alt="Scrum">
-                            </div>
-                                <h3>Scrum:</h3>
-                                    <p><span class="keyword">Descripción:</span> organiza el trabajo en sprints de duración fija, con roles definidos y ceremonias específicas. Permite gestionar proyectos con alta incertidumbre. <a href="../HTML/Seccion4-1.html">Ver más Acerca de “Scrum”</a></p>
-                        </div>
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="../Imagenes/Kanba.png" alt="Kanban">
-                            </div>
-                                <h3>Kanban:</h3>
-                                    <p><span class="keyword">Descripción:</span>  utiliza tableros visuales y tarjetas para gestionar el flujo de trabajo, limitando el WIP (Work In Progress) y facilitando la identificación de cuellos de botella. <a href="../HTML/Seccion4-2.html">Ver más Acerca de “Kanban”</a></p>
-                        </div>
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="../Imagenes/Extreme Programming.jpg" alt="Extreme Programming (XP)">
-                            </div>
-                                <h3>Extreme Programming:</h3>
-                                    <p><span class="keyword">Descripción:</span>se centra en la excelencia técnica, implementando prácticas como programación en pareja, desarrollo guiado por pruebas y refactorización continua<a href="../HTML/Seccion4-3.html">Ver más Acerca de “Extreme Programming (XP)” </a></p>
-                        </div>
+            <div class="card fade-in">
+                <div class="card-image">
+                    <img src="../Imagenes/Kanba.png" alt="Kanban">
+                </div>
+                <h3>Kanban:</h3>
+                <p>
+                    <span class="keyword">Descripción:</span> utiliza tableros visuales y tarjetas para gestionar 
+                    el flujo de trabajo, limitando el WIP (Work In Progress) y facilitando la identificación de 
+                    cuellos de botella. 
+                    <a href="../HTML/Seccion4-2.html">Ver más Acerca de “Kanban”</a>
+                </p>
+            </div>
+
+            <div class="card fade-in">
+                <div class="card-image">
+                    <img src="../Imagenes/Extreme Programming.jpg" alt="Extreme Programming (XP)">
+                </div>
+                <h3>Extreme Programming:</h3>
+                <p>
+                    <span class="keyword">Descripción:</span> se centra en la excelencia técnica, implementando 
+                    prácticas como programación en pareja, desarrollo guiado por pruebas y refactorización continua. 
+                    <a href="../HTML/Seccion4-3.html">Ver más Acerca de “Extreme Programming (XP)”</a>
+                </p>
+            </div>
+        </div>
     </section>
 </main>
+
 </body>
 </html>

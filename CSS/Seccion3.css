@@ -536,3 +536,41 @@ a {
     font-style: italic;
     margin-top: 10px;
 }
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* --- Adaptación móvil --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .logo img {
+    height: 50px;
+  }
+  #introduccion {
+    flex-direction: column;
+    padding: 20px;
+    margin: 15px;
+  }
+  #introduccion h1 {
+    font-size: 1.4rem;
+  }
+  .concepto-box {
+    padding: 20px;
+    max-width: 100%;
+  }
+  #Contenidos {
+    padding: 15px;
+  }
+  #Contenidos h2 {
+    font-size: 1.3rem;
+  }
+}

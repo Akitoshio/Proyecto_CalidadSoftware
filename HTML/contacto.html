@@ -8,49 +8,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../CSS/contacto.css"> 
     <script src="../JS/Contactos.js" defer></script>
-    
-    </head>
+</head>
 <body>
+<main class="contacto-page-main">
+    <section class="contenedor-contacto">
+        <div class="imagen-lado-izquierdo">
+            <img src="../Imagenes/LOGOGRANDE.png" alt="Logo de la Página">
+        </div>
 
-    <main class="contacto-page-main">
-        <section class="contenedor-contacto">
-            <div class="imagen-lado-izquierdo">
-                <img src="../Imagenes/LOGOGRANDE.png" alt="Logo de la Página">
+        <div class="formulario-lado-derecho">
+            <h2 class="fade-in">Contáctanos</h2>
+            <p class="fade-in">¡Estamos listos para responder tus dudas!</p>
+
+            <form id="contactForm" method="POST" class="form-contacto fade-in">
+                <div class="form-group fade-in">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
                 </div>
 
-            <div class="formulario-lado-derecho">
-                <h2>Contáctanos</h2>
-                <p>¡Estamos listos para responder tus dudas!</p>
+                <div class="form-group fade-in">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="correo@gmail.com" required>
+                </div>
 
-                <form id="contactForm" method="POST" class="form-contacto">
-                    <div class="form-group">
-                        <label for="nombre">Nombre Completo</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
-                    </div>
+                <div class="form-group fade-in">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta aquí..." rows="6" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="correo@gmail.com" required>
-                    </div>
+                <button type="submit" class="btn-enviar fade-in">Enviar Consulta</button>
+                <p id="mensajeEstado" class="fade-in"></p>
+            </form>
+        </div>
+    </section>
+</main>
 
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta aquí..." rows="6" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-enviar">Enviar Consulta</button>
-                    <p id="mensajeEstado"></p>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <a href="../HTML/pantalla1.html" class="volver">Volver a la página principal</a>
+<div class="lado">
+    <a href="../HTML/pantalla1.html" class="volver fade-in">Volver a la página principal</a>
+    <a href="../HTML/listaComen_Contact.html" class="volver fade-in">Ver la base de datos</a>
 </div>
-<!-- FIRE BASE -->
+<!-- FIREBASE -->
 <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
-
-
+<script src="../JS/Contactos.js" defer></script>
 </body>
 </html>

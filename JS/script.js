@@ -15,7 +15,8 @@ const htmlFiles = [
     { name: "Recursos y Aprendizaje", url:"../HTML/Seccion_Aprendizaje.html"},
     { name: "Funcionalidades Adicionales JavaScript", url:"../HTML/Func_Adic_JS.html"},
     { name: "Encuesta", url: "../HTML/Encuesta.html"},
-    { name: "Tabla Comparativa", url:"../HTML/Tabla_Comparatiba.html"}
+    { name: "Tabla Comparativa", url:"../HTML/Tabla_Comparatiba.html"},
+    { name: "Ver Base de Datos", url:"../HTML/listaComen_Contact.html"}
 ];
 
 const searchInput = document.getElementById('search');

@@ -223,53 +223,15 @@ html, body {
     background-color: transparent; 
 }
 
-.btn-volver-principal {
-    display: inline-flex; /* Permite que el elemento se centre y tome el ancho del contenido */
+.volver {
+    display: inline-block;
     justify-content: center;
     align-items: center;
-    gap: 10px; 
-    
-    background-color: transparent; 
-    
-    /* CLAVE: Color de texto verde oscuro, que contrasta con el fondo rosa */
-    color: #a5e352;
-    
-    /* Estilo de la "rayita" abajo (underline) */
-    text-decoration: underline;
-    text-decoration-color: #2e7d32; 
-    text-underline-offset: 5px; 
-    
-    font-size: 1.1rem; 
-    font-weight: bold;
-    padding: 5px; 
-    border-radius: 0; 
-    
-    box-shadow: none; 
-    transform: none; 
-    transition: color 0.2s ease, text-decoration-color 0.2s ease;
-}
-
-.btn-volver-principal i {
-    font-size: 1.1rem;
-}
-
-.btn-volver-principal:hover {
-    /* CLAVE: Cambia a verde claro en hover */
-    color: #a5e352; 
-    text-decoration-color: #a5e352; 
-    background-color: transparent;
-    transform: none; 
-}
-
-.btn-volver-principal:active {
-    color:#a5e352;
-    text-decoration-color: #a5e352;
-}
-.volver {
-    display: block;
+    position: relative;
+    left: 450px;
     width: fit-content;
     padding: 25px 40px;
-    margin: -25px auto 40px auto;
+    margin: -25px 20px 40px auto;
     background: #2e7d32;
     color: #a5e352;
     font-size: 1.2em;
@@ -289,4 +251,41 @@ html, body {
     box-shadow: 0 0 30px #a5e352, 0 0 60px #a5e352, 0 0 90px #a5e352;
     transform: scale(1.1);
     text-shadow: none;
-} 
+}/* --- Animación fade-in --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* --- Adaptación móvil --- */
+@media (max-width: 768px) {
+  .contacto-page-main {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .contenedor-contacto {
+    flex-direction: column;
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  .imagen-lado-izquierdo,
+  .formulario-lado-derecho {
+    width: 100%;
+    flex: none;
+  }
+  .formulario-lado-derecho {
+    padding: 25px;
+  }
+  .formulario-lado-derecho h2 {
+    font-size: 1.6rem;
+  }
+  .btn-enviar {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

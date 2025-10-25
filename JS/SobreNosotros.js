@@ -89,14 +89,14 @@ if (formComentario) {
     e.preventDefault();
 
     const nombre = document.getElementById("nombre").value;
-    const email = document.getElementById("email").value;
+    const correo = document.getElementById("email").value;
    const mensaje = document.getElementById("mensaje").value;
     const rating = document.querySelector('input[name="rating"]:checked')?.value || "Sin calificación";
 
     try {
       await db.collection("comentarios").add({
         nombre,
-        email,
+        correo,
         mensaje,
         rating,
         fecha: new Date()

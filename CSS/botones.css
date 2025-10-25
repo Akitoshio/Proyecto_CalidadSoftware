@@ -399,3 +399,37 @@ a {
   .btn:hover::after {
     left: 120%;
   }
+  /* --- Adaptación móvil --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+  .logo img {
+    height: 50px;
+  }
+  .sidebar {
+    width: 180px;
+  }
+  .buscador {
+    top: 70px;
+    right: 10px;
+  }
+  .buscador section input {
+    width: 180px;
+    font-size: 1rem;
+  }
+  #introduccion {
+    height: auto;
+    padding: 20px;
+    margin: 15px;
+  }
+  #introduccion h1 {
+    font-size: 1.3rem;
+    padding: 10px 25px;
+  }
+}
