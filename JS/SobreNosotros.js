@@ -72,7 +72,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDxf8I0krJXoguj4SW4Zw6iaW6nkIjeom8",
   authDomain: "contactoweb-38058.firebaseapp.com",
   projectId: "contactoweb-38058",
-  storageBucket: "contactoweb-38058.firebasestorage.app",
+ storageBucket: "contactoweb-38058.firebasestorage.app",
   messagingSenderId: "381135526165",
   appId: "1:381135526165:web:975d6241d85b4a2e22311c",
   measurementId: "G-QHQF1R9VEF"
