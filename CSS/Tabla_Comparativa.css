@@ -34,7 +34,7 @@ header h1{
     margin: 0;
     display: flex;
     font-size: 30px; 
-     white-space: nowrap;
+     white-space: nowrap;            /* <-- evita salto de línea */
     font-weight: 400;  
     font-style: italic;
     color: #a5e352;
@@ -208,9 +208,9 @@ label #time {
     max-height: 250px;
     overflow-y: auto;
     position: absolute;
-    top: 40px;
+    top: 40px;           /* justo debajo del input */
     left: 0;
-    width: 250px;
+    width: 250px;        /* coincide con el input expandido */
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
@@ -226,7 +226,7 @@ label #time {
 }
 
 .buscador li:hover,
-.buscador li.selected {
+.buscador li.selected { /* clase "selected" para teclado */
     background-color: #d3f0d3;
 }
 
@@ -257,13 +257,6 @@ main {
     padding: 10px 25px;
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(255, 0, 0, 0.549);
-    animation: fadeDown 1.2s ease-out forwards;
-    opacity: 0;
-  }
-
-  #uno:hover {
-    text-shadow: 0 0 10px #b1374390, 0 0 20px #ffacac;
-    transition: text-shadow 0.4s ease-in-out;
   }
 
   .selectors {
@@ -272,10 +265,7 @@ main {
     justify-content: center;
     gap: 15px;
     margin-bottom: 35px;
-    animation: fadeDown 1.2s ease-out forwards;
-    opacity: 0;
   }
-
 
   select {
     background: var(--verde);
@@ -353,89 +343,30 @@ li {
 a {
     text-decoration: none;
 }
+
+
 .volver {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    display: block;
+    width: fit-content;
+    padding: 20px 40px;
+    margin: 20px auto 40px auto;
+    background: #2e7d32;
+    color: #a5e352;
     font-size: 1.2em;
-    background: #fd9898;
-    color: #fff;
+    font-weight: bold;
     text-decoration: none;
-    position: relative;
-    top: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px #a5e352, 0 0 40px #a5e352, 0 0 60px #a5e352;
+    transition: all 0.3s ease;
+    border: 3px solid #a5e352;
+    text-align: center;
+    text-shadow: 0 0 10px #a5e352;
 }
 
 .volver:hover {
-    text-decoration: underline;
-    color: #aa0011;
-}
-
-/* ===== ANIMACIONES AGREGADAS ===== */
-
-/* KEYFRAMES */
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes cardIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* --- Adaptación móvil --- */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-    padding: 10px;
-  }
-  .logo img {
-    height: 50px;
-  }
-  main {
-    padding: 15px;
-  }
-  #uno {
-    font-size: 1.4rem;
-    padding: 10px;
-  }
-  table {
-    width: 100%;
-    font-size: 0.9rem;
-  }
+    background: #a5e352;
+    color: #2e7d32;
+    box-shadow: 0 0 30px #a5e352, 0 0 60px #a5e352, 0 0 90px #a5e352;
+    transform: scale(1.1);
+    text-shadow: none;
 }

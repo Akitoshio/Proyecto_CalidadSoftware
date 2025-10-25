@@ -1,26 +1,37 @@
+/* ================================================
+   1. RESET Y CONFIGURACIÓN BASE
+   ================================================ */
+
+/* Reset universal para eliminar estilos por defecto del navegador */
 * {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
+    box-sizing: border-box;
 }
 
+/* Configuración general del documento HTML y body */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; 
-    overscroll-behavior-y: none;
+    overflow-x: hidden; /* Previene scroll horizontal */
+    overscroll-behavior-y: none; /* Evita rebote en scroll */
 }
 
 body {
     min-height: 100vh;
-    background-color: #fd9898; 
+    background-color: #fd9898;
     font-family: 'Arial', sans-serif;
 }
 
+/* ================================================
+   2. HEADER Y NAVEGACIÓN PRINCIPAL
+   ================================================ */
 
+/* Header fijo en la parte superior */
 header {
     background-color: #2e7d32;
     padding: 15px 25px;
@@ -29,11 +40,12 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
-    width: 97%;
+    width: 100%;
     z-index: 1000;
     transition: all 0.5s ease;
 }
 
+/* Logo del sitio */
 .logo {
     margin-right: 50px;
 }
@@ -42,11 +54,13 @@ header {
     height: 70px;
     border-radius: 50%;
 }
-#brand{
-    display: flex;                 /* Oculto al inicio */
+
+/* Nombre de la marca (Pacifico font) */
+#brand {
+    display: flex;
     font-family: 'Pacifico', cursive;
     font-size: 33px;
-    color: #a5e352;                /* mismo tono de verde del menú */
+    color: #a5e352;
     position: relative;
     left: -190px;
     opacity: 0;
@@ -63,9 +77,15 @@ header {
 header .buscador {
   margin-left: 400px;
 }
-header nav{
+
+header nav {
     transition: opacity 0.3s ease;
 }
+
+/* ================================================
+   3. MENÚ DE NAVEGACIÓN
+   ================================================ */
+
 nav ul {
     list-style: none;
     display: flex;
@@ -79,6 +99,7 @@ nav ul li {
     margin: 0 5px;
 }
 
+/* Enlaces del menú */
 nav ul li a {
     text-decoration: none;
     color: #a5e352;
@@ -86,20 +107,25 @@ nav ul li a {
     font-size: 20px;
     padding: 0 10px;
     transition: transform 0.3s ease;
-    display: inline-block; 
+    display: inline-block;
 }
 
+/* Efecto hover en enlaces */
 nav ul li a:hover {
-    color: #c0f776; 
-    transform: scale(1.1); 
+    color: #c0f776;
+    transform: scale(1.1);
 }
 
+/* Separador entre enlaces (excepto el último) */
 nav ul li:not(:last-child) a {
     border-right: 2px solid #a5e352;
 }
-/*buscador*/
 
-/* BUSCADOR */
+/* ================================================
+   4. BUSCADOR
+   ================================================ */
+
+/* Contenedor del buscador */
 .buscador {
     display: flex;
     align-items: center;
@@ -112,12 +138,12 @@ nav ul li:not(:last-child) a {
     z-index: 100;
 }
 
-/* INPUT */
+/* Input de búsqueda */
 .buscador section input {
     outline: none;
     box-sizing: border-box;
     height: 43px;
-    width: 0;
+    width: 0; /* Empieza oculto */
     padding: 15px 20px;
     color: #2e7d32;
     border: 2px solid #2e7d32;
@@ -133,13 +159,14 @@ nav ul li:not(:last-child) a {
     color: #2e7d32;
 }
 
+/* Expande el input al hacer hover o focus */
 .buscador:hover input,
 .buscador:focus-within input {
     width: 250px;
     margin-right: 20px;
 }
 
-/* BOTÓN */
+/* Botón de búsqueda */
 .boton {
     position: absolute;
     right: 0;
@@ -161,7 +188,7 @@ nav ul li:not(:last-child) a {
     transition: all 0.7s ease;
 }
 
-/* LISTA DE RESULTADOS */
+/* Lista de resultados de búsqueda */
 .buscador ul {
     list-style: none;
     padding: 0;
@@ -169,16 +196,16 @@ nav ul li:not(:last-child) a {
     max-height: 250px;
     overflow-y: auto;
     position: absolute;
-    top: 40px;           /* justo debajo del input */
+    top: 40px;
     left: 0;
-    width: 250px;        /* coincide con el input expandido */
+    width: 250px;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
-/* ELEMENTOS DE LA LISTA */
+/* Elementos individuales de la lista */
 .buscador li {
     padding: 8px 12px;
     cursor: pointer;
@@ -187,11 +214,11 @@ nav ul li:not(:last-child) a {
 }
 
 .buscador li:hover,
-.buscador li.selected { /* clase "selected" para teclado */
+.buscador li.selected {
     background-color: #d3f0d3;
 }
 
-/* SCROLL ESTILIZADO */
+/* Scrollbar personalizada */
 .buscador ul::-webkit-scrollbar {
     width: 6px;
 }
@@ -200,6 +227,11 @@ nav ul li:not(:last-child) a {
     background: #2e7d32;
     border-radius: 3px;
 }
+
+/* ================================================
+   5. SECCIÓN INTRODUCCIÓN
+   ================================================ */
+
 #introduccion {
     background-image: url('../Imagenes/introduccion.jpg');
     background-size: 100% 100%;
@@ -225,264 +257,377 @@ nav ul li:not(:last-child) a {
     max-width: 800px;
     margin: auto;
 }
-#Contenidos {
-    background-color: #ffacac;
-    padding: 30px;
-    border-radius: 20px;
-    margin: 20px;
-}
 
-#Contenidos h2 {
-    text-align: center;
-    color: #aa0011;
-    font-size: 24px;
-    margin-bottom: 25px;
-    border-bottom: 3px solid #aa0011;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 8px;
-}
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 80px;
-    margin-top: 20px;
-}
-
-.card {
-    background-color: #FDDCDC;
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 15px;
-    line-height: 1.5;
-    color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease-in-out; /* Transición más suave y un poco más lenta para efecto premium */
-    position: relative;
-    overflow: hidden;
-}
-
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(170, 0, 17, 0.05), transparent); /* Degradado sutil base */
+/* Animaciones específicas de introducción */
+#introduccion .tex1 h1 {
+    animation: fadeDown 1.2s ease-out forwards;
     opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    z-index: 1;
 }
 
-.card:hover {
-    transform: translateY(-10px) scale(1.05); /* Elevación + escalado más notorio */
-    box-shadow: 0 20px 40px rgba(170, 0, 17, 0.4); /* Sombra más profunda y roja */
-    background-color: #ffe6e6; /* Cambio de fondo más suave */
+#introduccion .tex2 p {
+    animation: fadeUp 1.4s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
 }
 
-.card:hover::before {
-    opacity: 1; /* Activa el overlay en hover para efecto de brillo */
+#introduccion h1:hover {
+    text-shadow: 0 0 10px #b1374390, 0 0 20px #ffacac;
+    transition: text-shadow 0.4s ease-in-out;
 }
 
-.card-image {
-    margin-bottom: 15px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-}
+/* ================================================
+   6. CONTENEDOR CON EFECTO GLASSMORPHISM
+   ================================================ */
 
-.card-image img {
-    width: 100%;
-    height: 200px; /* Altura fija para consistencia; ajusta si necesitas */
-    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
-    transition: transform 0.4s ease-in-out; /* Transición para la imagen */
-    display: block;
-}
-
-.card:hover .card-image img {
-    transform: scale(1.1); /* Zoom en la imagen durante hover */
-}
-
-.card h3 {
-    color: #aa0011;
-    font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #aa0011;
-    padding-bottom: 5px;
-    position: relative;
-    z-index: 2; /* Asegura que el texto esté sobre el overlay */
-}
-
-.card p {
-    margin: 0 0 10px 0;
-    position: relative;
-    z-index: 2;
-}
-
-#Contenidos a {
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#Contenidos a:hover {
-    text-decoration: underline;
-    color: #aa0011;
-}
-
-.keyword {
-    color: #aa0011;
-    font-weight: bold;
-}
-
-/* Responsividad para móviles */
-@media (max-width: 768px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .card {
-        padding: 15px;
-    }
-    
-    .card-image img {
-        height: 150px; /* Imágenes más pequeñas en móvil */
-    }
-    
-    .card:hover {
-        transform: translateY(-5px) scale(1.02); /* Hover menos pronunciado en touch devices */
-    }
-}
-.borde{
+.borde {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 30vh;          /* altura más chica */
+    min-height: 30vh;
+    /* Efecto de cristal (glassmorphism) */
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     box-shadow: 0 8px 32px 0 #fca0a0;
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 32px;
-    padding: 10px;             /* menos padding */
+    padding: 10px;
     width: 80%;
     max-width: 1500px;
-    margin: 60px auto 20px auto; /* bajar recuadro */
+    margin: 60px auto 20px auto;
 }
 
-/* ===== ANIMACIONES AGREGADAS ===== */
+/* ================================================
+   7. SECCIÓN DE CONTENIDOS
+   ================================================ */
 
-/* Suave entrada del texto en la introducción */
-#introduccion .tex1 h1 {
-  animation: fadeDown 1.2s ease-out forwards;
-  opacity: 0;
+#Contenidos {
+    background-color: #ffacac;
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1400px;
 }
 
-#introduccion .tex2 p {
-  animation: fadeUp 1.4s ease-out forwards;
-  opacity: 0;
-  animation-delay: 0.3s;
+#Contenidos h2 {
+    text-align: center;
+    color: #aa0011;
+    font-size: 36px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #aa0011;
+    width: 60%;
+    margin: 0 auto 50px auto;
+    padding-bottom: 12px;
 }
 
-/* Cards con efecto de aparición secuencial */
+/* ================================================
+   8. CONTENEDOR DE TARJETAS (CARDS)
+   ================================================ */
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 0 auto;
+    transition: filter 0.5s ease;
+}
+
+/* Efecto blur en tarjetas no activas */
+.cards-container:hover .card:not(:hover) {
+    filter: blur(4px);
+    opacity: 0.5;
+    transform: scale(0.98);
+}
+
+/* ================================================
+   9. TARJETAS INDIVIDUALES (CARDS)
+   ================================================ */
+
+/* Card base */
+.card {
+    background-color: #FDDCDC;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 130px;
+    max-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Contenedor interno de la card */
+.card-inner-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-shrink: 0;
+    transition: all 0.5s ease;
+}
+
+/* Número de la tarjeta */
+.card-number {
+    font-size: 60px;
+    font-weight: bold;
+    color: rgba(170, 0, 17, 0.5);
+    margin-right: 25px;
+    flex-shrink: 0;
+    line-height: 1;
+    transition: all 0.5s ease;
+    position: relative;
+    top: -5px;
+}
+
+/* Imagen circular de la tarjeta */
+.card-image {
+    width: 85px;
+    height: 85px;
+    background-color: #FF4466;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+    box-shadow: 0 5px 15px rgba(255, 68, 102, 0.5);
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.card-image img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Texto del header de la tarjeta */
+.card-header-text {
+    flex-grow: 1;
+    overflow: hidden;
+    padding-top: 5px;
+}
+
+.card h3 {
+    color: #aa0011;
+    font-size: 25px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    border: none;
+    transition: color 0.5s ease;
+}
+
+.card-header-text p {
+    color: #888;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Contenido expandible (oculto por defecto) */
+.card-expanded-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0;
+    transition: max-height 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                opacity 0.4s ease, 
+                padding-top 0.5s ease;
+    width: 100%;
+}
+
+.card-expanded-content p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.card-expanded-content a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    transition: color 0.3s;
+}
+
+/* Palabras clave destacadas */
+.keyword {
+    color: #aa0011;
+    font-weight: bold;
+}
+
+/* ================================================
+   10. EFECTOS HOVER DE LAS TARJETAS
+   ================================================ */
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(170, 0, 17, 0.3);
+    background-color: #ffebee;
+    z-index: 10;
+    max-height: 500px;
+    padding-bottom: 30px;
+}
+
+.card:hover .card-number {
+    color: #aa0011;
+    font-size: 68px;
+}
+
+.card:hover h3 {
+    color: #c62828;
+    font-size: 28px;
+}
+
+.card:hover .card-image {
+    background-color: #e53935;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card:hover .card-expanded-content {
+    max-height: 500px;
+    opacity: 1;
+    padding-top: 15px;
+}
+
+/* ================================================
+   11. ANIMACIONES (KEYFRAMES)
+   ================================================ */
+
+/* Animación: bajar con fade */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación: subir con fade */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación: entrar desde la izquierda */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animación: aparición de tarjetas */
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================================
+   12. ANIMACIONES SECUENCIALES DE TARJETAS
+   ================================================ */
+
 .cards-container.loaded .card {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: cardIn 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: cardIn 0.8s ease-out forwards;
 }
 
+/* Delays progresivos para cada tarjeta */
 .cards-container.loaded .card:nth-child(1) { animation-delay: 0.2s; }
 .cards-container.loaded .card:nth-child(2) { animation-delay: 0.4s; }
 .cards-container.loaded .card:nth-child(3) { animation-delay: 0.6s; }
 .cards-container.loaded .card:nth-child(4) { animation-delay: 0.8s; }
 .cards-container.loaded .card:nth-child(5) { animation-delay: 1s; }
 
-/* Brillo sutil al pasar el cursor por el título principal */
-#introduccion h1:hover {
-  text-shadow: 0 0 10px #b1374390, 0 0 20px #ffacac;
-  transition: text-shadow 0.4s ease-in-out;
-}
+/* ================================================
+   13. RESPONSIVE DESIGN (MÓVILES Y TABLETS)
+   ================================================ */
 
-
-/* ====== KEYFRAMES ====== */
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes cardIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* --- Adaptación móvil --- */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-    padding: 10px;
-  }
-  .logo img {
-    height: 50px;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  #introduccion {
-    padding: 20px;
-    margin-top: 70px;
-  }
-  #introduccion h1 {
-    font-size: 1.6rem;
-  }
-  .cards-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .card {
-    padding: 15px;
-  }
+    /* Ajustes para contenidos */
+    #Contenidos {
+        padding: 30px 15px;
+        margin: 20px;
+        max-width: 100%;
+    }
+    
+    .cards-container {
+        gap: 15px;
+    }
+    
+    /* Tarjetas más pequeñas */
+    .card {
+        padding: 15px;
+        max-height: 100px;
+        min-height: 100px;
+    }
+    
+    .card-number {
+        font-size: 40px;
+        margin-right: 12px;
+    }
+    
+    .card-image {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+    
+    .card h3 {
+        font-size: 19px;
+    }
+    
+    .card-header-text p {
+        font-size: 14px;
+    }
+    
+    /* Efectos hover reducidos en móvil */
+    .card:hover {
+        transform: scale(1.02);
+    }
+    
+    .cards-container:hover .card:not(:hover) {
+        filter: blur(2px);
+        opacity: 0.7;
+    }
 }
-
-

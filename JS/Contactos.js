@@ -29,7 +29,7 @@ if (formComentario) {
    const mensaje = document.getElementById("mensaje").value;
 
     try {
-      await db.collection("comentarios").add({
+      await db.collection("contactForm").add({
         nombreApellido,
         correoCont,
         mensaje,
@@ -43,7 +43,8 @@ if (formComentario) {
       alert("❌ Error al guardar el comentario.");
     }
   });
-}// Animación fade-in al hacer scroll
+}
+// Animación fade-in al hacer scroll
 document.addEventListener("DOMContentLoaded", function() {
   const faders = document.querySelectorAll('.fade-in');
 

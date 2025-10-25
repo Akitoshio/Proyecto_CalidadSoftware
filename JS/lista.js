@@ -14,7 +14,7 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 // UID permitido
-const MI_UID = "XNLU5MODyzdCIWIfg4N5F3DxMim2z";
+const MI_UID = "XNLU5MODyzdCIWIfg4N5F3DxMim2";
 
 const loginSection = document.getElementById("login-section");
 const panelSection = document.getElementById("panel-section");
